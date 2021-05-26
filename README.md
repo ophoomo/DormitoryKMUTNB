@@ -8,6 +8,6 @@
 4. Bootstrap
 
 ## คณะผู้จัดทำ
-1. mashiro
-2.
+1. Mashiro
+2. Thanaphoom
 3.
