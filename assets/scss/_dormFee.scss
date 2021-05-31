@@ -4,8 +4,10 @@
 // 'icon mainT2 womenT2 women2T2'
 // 'icon title'
 // 'icon text'
-$colorIcon: rgb(128, 8, 0);
-$colorTitle: rgb(199, 60, 17); // $colorIcon: rgb(136, 18, 63);
+// $colorIcon: rgb(93, 37, 107);
+// $colorTitle: rgb(156, 0, 117); // $colorIcon: rgb(136, 18, 63);
+$colorIcon: rgb(156, 10, 10);
+$colorTitle: rgb(216, 86, 53); // $colorIcon: rgb(136, 18, 63);
 body {
     background-color: $colorWhite - 10;
 }
@@ -55,7 +57,7 @@ body {
                 display: flex;
                 justify-content: center;
                 font-size: 18px;
-                background: $colorTitle - 40;
+                background: $colorTitle - 20;
                 p {
                     letter-spacing: 1px;
                     color: white;
