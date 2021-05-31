@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>หอพักนักศึกษา มจพ. ปราจีนบุรี</title>
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="icon" href="./assets/img/logoKmutnb.png">
+    <link rel="icon" href="./assets/img/logoKmutnb.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -30,7 +30,7 @@
             <div class="overlayNav"></div>
             <div id="nav" class="navbar">
                 <div class="logo">
-                    <img src="./assets/img/logoKmutnb.png" alt="">
+                    <img src="./assets/img/logoKmutnb.webp" alt="">
                     <div class="text">
                         <a href="main_page.php" id="titleText" class="LargeText">ระบบหอพักนักศึกษา</a>
                         <!-- <p class="smallText">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ ว.ปราจีนบุรี</p> -->
@@ -51,7 +51,7 @@
             
             <div class="banner">
                 <div class="overlay"></div>
-                <div id="slide" class="slide" style="background: url('./assets/img/dorm/women_01.jpg');"></div>
+                <div id="slide" class="slide" style="background: url('./assets/img/dorm/women_01.webp');"></div>
                 <div class="flexCenter">
                     <div class="textArea">
                         <div class="largeText">

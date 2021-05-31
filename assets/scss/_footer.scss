@@ -3,14 +3,12 @@
     margin-top: 80px;
     position: relative !important;
     width: 100%;
-    background-color: #333;
-    
+    background-color: #222;
     .copyRight {
         margin: 0 auto;
         text-align: center;
         width: 90%;
         padding: 14px 0;
-        
         p {
             font-size: 14px;
             // font-weight: 300;
@@ -24,11 +22,15 @@
 
 // Height navbar scroll
 @media only screen and (min-height: 0px) and (max-height: 560px) {
-    .side-bar { overflow: scroll !important; }}
+    .side-bar {
+        overflow: scroll !important;
+    }
+}
 
 // Default media responsive
-@media only screen and (min-width: 280px) and (max-width: 420px) { // Phone
-// Footer    
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    // Phone
+    // Footer    
     .container_footer {
         .copyRight {
             width: 90%;
@@ -40,14 +42,15 @@
     }
 }
 
-@media only screen and (min-width: 420px) and (max-width: 780px) { // Tablet Ipad
-// Footer    
+@media only screen and (min-width: 420px) and (max-width: 780px) {
+    // Tablet Ipad
+    // Footer    
     .container_footer {
         .copyRight {
             width: 90%;
             padding: 12px 0 !important;
             p {
-                font-size:10px !important;
+                font-size: 10px !important;
             }
         }
     }

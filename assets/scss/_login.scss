@@ -3,20 +3,19 @@
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
-    font-family: 'Kanit', sans-serif;    
+    font-family: 'Kanit', sans-serif;
     position: relative;
     max-width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
     .areaLogin {
         z-index: 2;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -24,21 +23,19 @@
         background-color: rgb(234, 234, 234);
         border-radius: 10px;
         padding: 40px;
-        
         p {
             font-size: 32px;
             margin-bottom: 28px;
         }
-        
         .input {
             justify-content: center;
             align-items: center;
             display: grid;
             grid-template-columns: minmax(40px, 1fr);
             grid-template-rows: 1fr 1fr;
-            grid-template-areas: "iconU username"
-                                 "iconP password";
-            input:nth-child(3) , input:nth-child(4) {
+            grid-template-areas: "iconU username" "iconP password";
+            input:nth-child(3),
+            input:nth-child(4) {
                 box-shadow: $boxShadow;
                 font-family: "Kanit", sans-serif;
                 margin: 6px 0;
@@ -48,25 +45,28 @@
                 padding: 10px 5px 10px 15px;
                 font-size: 16px;
             }
-            i:nth-child(1) { grid-area: iconU; }
-            i:nth-child(2) { grid-area: iconP; }
-            input:nth-child(1) { grid-area: username; }
-            input:nth-child(2) { grid-area: password; }
-            
+            i:nth-child(1) {
+                grid-area: iconU;
+            }
+            i:nth-child(2) {
+                grid-area: iconP;
+            }
+            input:nth-child(1) {
+                grid-area: username;
+            }
+            input:nth-child(2) {
+                grid-area: password;
+            }
         }
-        
-        
         .forgotPassword {
             color: $colorDark;
             text-decoration: none;
             font-size: 12px;
             margin: 10px 0 26px 0;
-            
             &:hover {
                 text-decoration: underline;
             }
         }
-        
         .btnLogin {
             cursor: pointer;
             font-size: 16px;
@@ -78,12 +78,10 @@
             border: none;
             margin-bottom: 36px;
             transition: 0.2s;
-            
             &:hover {
                 background-color: rgb(173, 55, 0);
             }
         }
-        
         .areaRegister {
             cursor: pointer;
             margin-top: 40px;
@@ -96,17 +94,15 @@
             background-color: $colorDark + 50;
             border-radius: 0 0 10px 10px;
             transition: 0.2s;
-            
             &:hover {
                 background-color: $colorDark + 20;
             }
-            
             .btnRegister {
                 display: flex;
                 margin-top: 12px;
                 font-size: 16px;
                 color: $colorWhite;
-                text-decoration: none !important;                
+                text-decoration: none !important;
             }
         }
     }
@@ -121,7 +117,6 @@
     height: 100vh;
 }
 
-
 @media only screen and (min-width: 280px) and (max-width: 420px) {
     .container_login {
         .areaLogin {
@@ -132,45 +127,39 @@
                 margin-bottom: 28px;
             }
             .input {
-                input:nth-child(3) , input:nth-child(4) {
+                input:nth-child(3),
+                input:nth-child(4) {
                     margin: 6px 0;
                     width: 180px;
                     padding: 10px 5px 10px 15px;
                     font-size: 14px;
                 }
             }
-            
-            
             .forgotPassword {
                 font-size: 12px;
                 margin: 10px 0 26px 0;
-                
                 &:hover {
                     text-decoration: underline;
                 }
             }
-            
             .btnLogin {
                 font-size: 16px;
                 padding: 8px 40px 8px 40px;
                 border-radius: 5px;
                 margin-bottom: 36px;
             }
-            
             .areaRegister {
                 margin-top: 40px;
                 bottom: 0;
                 width: 100%;
                 height: 40px;
                 border-radius: 0 0 10px 10px;
-                
                 .btnRegister {
                     text-decoration: none !important;
                     margin-top: 12px;
                     font-size: 16px;
                 }
             }
-            
         }
     }
 }

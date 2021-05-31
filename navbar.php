@@ -1,7 +1,7 @@
 <!-- Menu  -->
 <div id="container_navbar">
     <div class="areaNav">
-        <div class="textTitle">
+        <div class="textTitle"> 
             <a href="main_page.php">หอพักนึกศึกษา มจพ. ปราจีนฯ</a>
         </div>
         <div class="menu">

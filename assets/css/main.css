@@ -13,7 +13,7 @@ body {
 
 .container {
   margin: 0 auto;
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   min-height: 100%; }
 
 .userSelectNone {
@@ -28,19 +28,87 @@ body {
   background: #000;
   transition: 0.4s ease-in-out; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -49,21 +117,34 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 body {
   line-height: 1; }
 
-ol, ul {
+ol,
+ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -728,7 +809,7 @@ table {
   margin-top: 80px;
   position: relative !important;
   width: 100%;
-  background-color: #333; }
+  background-color: #222; }
   .container_footer .copyRight {
     margin: 0 auto;
     text-align: center;
@@ -791,8 +872,9 @@ table {
       display: grid;
       grid-template-columns: minmax(40px, 1fr);
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "iconU username" "iconP password"; }
-      .container_login .areaLogin .input input:nth-child(3), .container_login .areaLogin .input input:nth-child(4) {
+      grid-template-areas: "iconU username" "iconP password"; }
+      .container_login .areaLogin .input input:nth-child(3),
+      .container_login .areaLogin .input input:nth-child(4) {
         box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
         font-family: "Kanit", sans-serif;
         margin: 6px 0;
@@ -865,7 +947,8 @@ table {
     .container_login .areaLogin p {
       font-size: 24px;
       margin-bottom: 28px; }
-    .container_login .areaLogin .input input:nth-child(3), .container_login .areaLogin .input input:nth-child(4) {
+    .container_login .areaLogin .input input:nth-child(3),
+    .container_login .areaLogin .input input:nth-child(4) {
       margin: 6px 0;
       width: 180px;
       padding: 10px 5px 10px 15px;
@@ -1055,7 +1138,9 @@ body {
           display: flex;
           align-items: center;
           justify-content: flex-end; }
-        .containerMain .container_contact .areaContact .contacts .fb, .containerMain .container_contact .areaContact .contacts .phone, .containerMain .container_contact .areaContact .contacts .location {
+        .containerMain .container_contact .areaContact .contacts .fb,
+        .containerMain .container_contact .areaContact .contacts .phone,
+        .containerMain .container_contact .areaContact .contacts .location {
           display: grid;
           width: 100%;
           border-radius: 50px;
@@ -1064,7 +1149,9 @@ body {
           margin: 10px 0;
           box-shadow: 1px 1px 6px 0 rgba(34, 34, 34, 0.4);
           background-color: #fafafa; }
-          .containerMain .container_contact .areaContact .contacts .fb p, .containerMain .container_contact .areaContact .contacts .phone p, .containerMain .container_contact .areaContact .contacts .location p {
+          .containerMain .container_contact .areaContact .contacts .fb p,
+          .containerMain .container_contact .areaContact .contacts .phone p,
+          .containerMain .container_contact .areaContact .contacts .location p {
             font-size: 14px;
             margin-left: 56px; }
         .containerMain .container_contact .areaContact .contacts .fb {
@@ -1073,7 +1160,8 @@ body {
           .containerMain .container_contact .areaContact .contacts .fb i {
             margin-bottom: 2px;
             color: #004aac; }
-          .containerMain .container_contact .areaContact .contacts .fb p, .containerMain .container_contact .areaContact .contacts .fb a {
+          .containerMain .container_contact .areaContact .contacts .fb p,
+          .containerMain .container_contact .areaContact .contacts .fb a {
             width: 100%;
             height: 100%;
             display: flex;
@@ -1127,7 +1215,7 @@ body {
     .container_contact .areaContact {
       line-height: 1.2 !important;
       grid-template-rows: 1fr 1fr !important;
-      grid-template-areas: 'contact contact' 'map map' !important; }
+      grid-template-areas: 'contact contact' 'map map' !important; }
       .container_contact .areaContact .map {
         height: 100px !important;
         grid-area: map !important; }
@@ -1248,7 +1336,8 @@ body {
         .container_contact .areaContact .contacts .fb {
           grid-template-columns: 20px 1fr 1fr !important;
           height: 20px !important; }
-          .container_contact .areaContact .contacts .fb p, .container_contact .areaContact .contacts .fb a {
+          .container_contact .areaContact .contacts .fb p,
+          .container_contact .areaContact .contacts .fb a {
             margin-top: -1.5px !important;
             font-size: 9px !important; }
         .container_contact .areaContact .contacts .phone {
@@ -1266,14 +1355,20 @@ body {
           .container_contact .areaContact .contacts .location p {
             margin-left: 50px !important;
             font-size: 8px !important; }
-        .container_contact .areaContact .contacts .fb, .container_contact .areaContact .contacts .phone, .container_contact .areaContact .contacts .location {
+        .container_contact .areaContact .contacts .fb,
+        .container_contact .areaContact .contacts .phone,
+        .container_contact .areaContact .contacts .location {
           margin: 0 auto;
           width: 300px !important;
           width: 280px !important; }
-          .container_contact .areaContact .contacts .fb .number p, .container_contact .areaContact .contacts .phone .number p, .container_contact .areaContact .contacts .location .number p {
+          .container_contact .areaContact .contacts .fb .number p,
+          .container_contact .areaContact .contacts .phone .number p,
+          .container_contact .areaContact .contacts .location .number p {
             font-size: 8px !important;
             margin-bottom: 2px !important; }
-          .container_contact .areaContact .contacts .fb .text, .container_contact .areaContact .contacts .phone .text, .container_contact .areaContact .contacts .location .text {
+          .container_contact .areaContact .contacts .fb .text,
+          .container_contact .areaContact .contacts .phone .text,
+          .container_contact .areaContact .contacts .location .text {
             margin-left: -20px !important; } }
 
 @media only screen and (min-width: 420px) and (max-width: 780px) {
@@ -1322,15 +1417,23 @@ body {
         width: 90% !important; }
       .container_contact .areaContact .contacts {
         align-items: center; }
-        .container_contact .areaContact .contacts .fb, .container_contact .areaContact .contacts .phone, .container_contact .areaContact .contacts .location {
+        .container_contact .areaContact .contacts .fb,
+        .container_contact .areaContact .contacts .phone,
+        .container_contact .areaContact .contacts .location {
           margin: 0 auto;
           width: 400px !important; }
-          .container_contact .areaContact .contacts .fb .number p, .container_contact .areaContact .contacts .phone .number p, .container_contact .areaContact .contacts .location .number p {
+          .container_contact .areaContact .contacts .fb .number p,
+          .container_contact .areaContact .contacts .phone .number p,
+          .container_contact .areaContact .contacts .location .number p {
             font-size: 10px !important;
             margin-bottom: 2px !important; }
-          .container_contact .areaContact .contacts .fb p, .container_contact .areaContact .contacts .phone p, .container_contact .areaContact .contacts .location p {
+          .container_contact .areaContact .contacts .fb p,
+          .container_contact .areaContact .contacts .phone p,
+          .container_contact .areaContact .contacts .location p {
             font-size: 11px !important; }
-          .container_contact .areaContact .contacts .fb a, .container_contact .areaContact .contacts .phone a, .container_contact .areaContact .contacts .location a {
+          .container_contact .areaContact .contacts .fb a,
+          .container_contact .areaContact .contacts .phone a,
+          .container_contact .areaContact .contacts .location a {
             font-size: 12px !important; } }
 
 @media only screen and (min-width: 780px) and (max-width: 1400px) {
@@ -1367,7 +1470,7 @@ body {
 .container_fee {
   margin-top: 140px; }
   .container_fee .icon {
-    color: #780000;
+    color: #800800;
     display: flex;
     justify-content: center;
     align-self: center; }
@@ -1387,11 +1490,13 @@ body {
       display: grid;
       grid-template-columns: 200px 200px 300px;
       grid-template-rows: 40px 40px 40px 40px;
-      grid-template-areas: 'title title title' 'man women women2' 'manT1 womenT1 women2T1' 'manT1 womenT1 women2T2';
+      grid-template-areas: 'title title title' 'man women women2' 'manT1 womenT1 women2T1' 'manT1 womenT1 women2T2';
       justify-content: center; }
-      .container_fee .areaFee .room_fee .man, .container_fee .areaFee .room_fee .women, .container_fee .areaFee .room_fee .women2 {
+      .container_fee .areaFee .room_fee .man,
+      .container_fee .areaFee .room_fee .women,
+      .container_fee .areaFee .room_fee .women2 {
         font-size: 16px;
-        background: #ad2300;
+        background: #c73c11;
         color: #f0f0f0; }
       .container_fee .areaFee .room_fee .txt {
         background-color: #f0f0f0; }
@@ -1400,7 +1505,7 @@ body {
         display: flex;
         justify-content: center;
         font-size: 18px;
-        background: #850000; }
+        background: #9f1400; }
         .container_fee .areaFee .room_fee .title p {
           letter-spacing: 1px;
           color: white; }
@@ -1440,14 +1545,18 @@ body {
         display: flex;
         justify-content: center;
         grid-area: women2T2; }
-  .container_fee .insurance, .container_fee .insuKey, .container_fee .feeToday {
+  .container_fee .insurance,
+  .container_fee .insuKey,
+  .container_fee .feeToday {
     margin-top: 80px;
     display: grid;
     grid-template-columns: 120px 580px;
     grid-template-rows: 40px 40px;
-    grid-template-areas: 'icon title' 'icon text';
+    grid-template-areas: 'icon title' 'icon text';
     justify-content: center; }
-    .container_fee .insurance .title, .container_fee .insuKey .title, .container_fee .feeToday .title {
+    .container_fee .insurance .title,
+    .container_fee .insuKey .title,
+    .container_fee .feeToday .title {
       letter-spacing: 1px; }
   .container_fee .areaInsurance {
     margin: 0 auto;
@@ -1456,7 +1565,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsurance .title {
       grid-area: title;
-      background-color: #ad2300;
+      background-color: #c73c11;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1472,7 +1581,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsuKey .title {
       grid-area: title;
-      background-color: #ad2300;
+      background-color: #c73c11;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1488,7 +1597,7 @@ body {
       grid-area: icon; }
     .container_fee .areafeeToday .title {
       grid-area: title;
-      background-color: #ad2300;
+      background-color: #c73c11;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1516,7 +1625,9 @@ body {
       .container_fee .areaFee .room_fee {
         grid-template-columns: 100px 100px 100px !important;
         grid-template-rows: 40px 40px 50px 50px !important; }
-        .container_fee .areaFee .room_fee .man, .container_fee .areaFee .room_fee .women, .container_fee .areaFee .room_fee .women2 {
+        .container_fee .areaFee .room_fee .man,
+        .container_fee .areaFee .room_fee .women,
+        .container_fee .areaFee .room_fee .women2 {
           font-size: 14px !important; }
         .container_fee .areaFee .room_fee .title {
           font-size: 16px !important;
@@ -1528,11 +1639,15 @@ body {
           text-align: center;
           line-height: 1.4;
           font-size: 14px !important; }
-    .container_fee .insurance, .container_fee .insuKey, .container_fee .feeToday {
+    .container_fee .insurance,
+    .container_fee .insuKey,
+    .container_fee .feeToday {
       margin-top: 60px !important;
-      grid-template-columns: 100px 200px  !important;
+      grid-template-columns: 100px 200px !important;
       grid-template-rows: 40px 40px !important; }
-      .container_fee .insurance .title, .container_fee .insuKey .title, .container_fee .feeToday .title {
+      .container_fee .insurance .title,
+      .container_fee .insuKey .title,
+      .container_fee .feeToday .title {
         letter-spacing: 1px !important;
         font-size: 14px !important; }
     .container_fee .areaInsurance {
@@ -1631,7 +1746,7 @@ body {
     max-width: 1200px !important; }
     .areaSample .areaSection {
       grid-template-rows: auto auto !important;
-      grid-template-areas: 'session1 session1' 'session2 session2' !important; }
+      grid-template-areas: 'session1 session1' 'session2 session2' !important; }
     .areaSample .session1 {
       grid-area: session1 !important; }
     .areaSample .session2 {
@@ -1688,7 +1803,7 @@ body {
     max-width: 1200px !important; }
     .areaSample .areaSection {
       grid-template-rows: 1fr 1fr !important;
-      grid-template-areas: 'session1 session1' 'session2 session2' !important; }
+      grid-template-areas: 'session1 session1' 'session2 session2' !important; }
     .areaSample .session1 {
       grid-area: session1 !important; }
     .areaSample .session2 {
