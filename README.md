@@ -6,6 +6,7 @@
 2. PHP
 3. SweetAlert2
 4. Bootstrap
+5. Scss
 
 ## คณะผู้จัดทำ
 1. Mashiro
