@@ -1470,7 +1470,7 @@ body {
 .container_fee {
   margin-top: 140px; }
   .container_fee .icon {
-    color: #9c0a0a;
+    color: #a02d00;
     display: flex;
     justify-content: center;
     align-self: center; }
@@ -1496,7 +1496,7 @@ body {
       .container_fee .areaFee .room_fee .women,
       .container_fee .areaFee .room_fee .women2 {
         font-size: 16px;
-        background: #d85635;
+        background: #d66447;
         color: #f0f0f0; }
       .container_fee .areaFee .room_fee .txt {
         background-color: #f0f0f0; }
@@ -1505,7 +1505,7 @@ body {
         display: flex;
         justify-content: center;
         font-size: 18px;
-        background: #c44221; }
+        background: #c25033; }
         .container_fee .areaFee .room_fee .title p {
           letter-spacing: 1px;
           color: white; }
@@ -1565,7 +1565,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsurance .title {
       grid-area: title;
-      background-color: #d85635;
+      background-color: #d66447;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1581,7 +1581,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsuKey .title {
       grid-area: title;
-      background-color: #d85635;
+      background-color: #d66447;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1597,7 +1597,7 @@ body {
       grid-area: icon; }
     .container_fee .areafeeToday .title {
       grid-area: title;
-      background-color: #d85635;
+      background-color: #d66447;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1925,6 +1925,110 @@ body {
         background: #f0f0f0 !important;
         width: 420px !important;
         height: 100% !important; } }
+
+.areaPlan {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .areaPlan .session1 .titleText {
+    margin-top: 160px;
+    text-align: center;
+    width: 100%; }
+    .areaPlan .session1 .titleText p {
+      font-size: 42px;
+      font-weight: 300; }
+  .areaPlan .session1 .textSelect {
+    margin-top: 50px;
+    text-align: center; }
+    .areaPlan .session1 .textSelect p {
+      letter-spacing: 2px;
+      font-size: 18px; }
+  .areaPlan .session1 .btnSelect {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .areaPlan .session1 .btnSelect .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 42px;
+      width: 120px;
+      margin: 0 10px;
+      background-color: #ad2300;
+      color: white;
+      transition: 0.2s ease-in-out;
+      border-radius: 5px;
+      font-size: 16px; }
+      .areaPlan .session1 .btnSelect .btn:hover {
+        transform: scale(1.06, 1.06);
+        background-color: #850000; }
+  .areaPlan .session2 .plan {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem; }
+    .areaPlan .session2 .plan .item {
+      border-radius: 5px;
+      padding: 8px; }
+      .areaPlan .session2 .plan .item p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 340px;
+        background-color: #525252;
+        height: 34px;
+        border-radius: 5px 5px 0 0;
+        font-size: 15px;
+        text-align: center;
+        color: #f0f0f0; }
+      .areaPlan .session2 .plan .item img {
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+        background: #f0f0f0;
+        max-width: 340px; }
+
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+  .session1 .titleText {
+    margin-top: 120px !important;
+    width: 100% !important; }
+    .session1 .titleText p {
+      font-size: 28px !important;
+      font-weight: 300 !important; }
+  .session1 .textSelect {
+    margin-top: 50px !important; }
+    .session1 .textSelect p {
+      letter-spacing: 2px !important;
+      font-size: 16px !important; }
+  .session1 .btnSelect {
+    margin-top: 18px !important; }
+    .session1 .btnSelect .btn {
+      width: 80px !important;
+      height: 32px !important;
+      font-size: 14px !important; }
+  .session2 .item {
+    border-radius: 5px !important;
+    padding: 8px !important; }
+    .session2 .item p {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 0 auto !important;
+      max-width: 340px !important;
+      background-color: #525252 !important;
+      height: 34px !important;
+      border-radius: 5px 5px 0 0 !important;
+      font-size: 15px !important;
+      text-align: center !important;
+      color: #f0f0f0 !important; }
+    .session2 .item img {
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08) !important;
+      background: #f0f0f0 !important;
+      max-width: 300px !important; } }
 
 @media only screen and (max-width: 280px) {
   * {

@@ -44,7 +44,7 @@
                     </div>
                     <div class="description">
                     <p class="userSelectNone">คำอธิบาย</p>
-                    <div id="txt" class="textDescript deactive">
+                    <div id="txt" class="textDescript">
                         <ul>
                             <li>หอพักชาย ห้องละ 5 คน</li>
                             <li>เตียงเดี่ยว 5 เตียง</li>
@@ -76,41 +76,41 @@
         </div>
         
         <div class="areaImage">
-            <div class="dorm deactive">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_01.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_02.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_03.webp" alt="">
-                <!-- <img class="zoom" src="./assets/img/dorm/rorm_male_04.webp" alt=""> -->
-                <img class="zoom" src="./assets/img/dorm/rorm_male_05.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_06.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_07.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_08.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_male_09.webp" alt="">
+            <div class="dorm">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_01.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_02.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_03.webp" alt="">
+                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_male_04.webp" alt=""> -->
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_05.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_06.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_07.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_08.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_male_09.webp" alt="">
             </div>
             <div class="dorm deactive">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_1_01.webp" alt="">                 
-                <img class="zoom" src="./assets/img/dorm/rorm_female_1_02.webp" alt="">                 
-                <img class="zoom" src="./assets/img/dorm/rorm_female_1_03.webp" alt="">
-                <!-- <img class="zoom" src="./assets/img/dorm/rorm_female_1_04.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/rorm_female_1_05.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/room_famele_1_06.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/room_famele_1_07.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/room_famele_1_08.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/room_famele_1_09.webp" alt=""> -->
-                <!-- <img class="zoom" src="./assets/img/dorm/room_famele_1_10.webp" alt=""> -->
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_01.webp" alt="">                 
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_02.webp" alt="">                 
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_03.webp" alt="">
+                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_04.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_05.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_06.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_07.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_08.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_09.webp" alt=""> -->
+                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_10.webp" alt=""> -->
             
             </div>
             <div class="dorm deactive">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_01.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_02.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_03.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_04.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_05.webp" alt="">
-                <!-- <img class="zoom" src="./assets/img/dorm/rorm_female_2_06.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_07.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_08.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_09.webp" alt="">
-                <img class="zoom" src="./assets/img/dorm/rorm_female_2_10.webp" alt=""> -->
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_01.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_02.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_03.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_04.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_05.webp" alt="">
+                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_06.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_07.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_08.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_09.webp" alt="">
+                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_10.webp" alt=""> -->
             </div>
         </div>
     </div>
@@ -120,6 +120,6 @@
     
     
     <script src="./assets/js/_room_sample.js"></script>    
-    <!-- <script src="./assets/js/medium-zoom.min.js"></script> -->
+    <!-- <script src="./assets/js/medium-zoomImg.min.js"></script> -->
 </body>    
 </html>

@@ -15,17 +15,97 @@
         /* #container_navbar { background-color: rgb(80, 20, 0) !important; } */
     </style>
 <body>
-
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
         
     <div class="container">
-        
+        <div class="areaPlan">
+            <div class="session1 userSelectNone">
+                <div class="titleText">
+                    <p id="txtStatus">แผนผังหอพัก</p>
+                </div>
+                <div class="textSelect">
+                    <p>เลือกแผนผังหอพักที่ต้องการดู</p>
+                </div>
+                <div class="btnSelect">
+                    <div class="btn btn1"><p>หอชาย</p></div>
+                    <div class="btn btn2"><p>หอหญิง 1</p></div>
+                    <div class="btn btn3"><p>หอหญิง 2</p></div>
+                </div>
+            </div>
+            <div class="session2">
+                <div class="plan">
+                    <div class="item">
+                        <p>ชั้น 1</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_male_01.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 2</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_male_02.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 3</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_male_03.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 4</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_male_04.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 5</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_male_05.webp" alt="">
+                    </div>
+                </div>
+                <div class="plan deactive">
+                    <div class="item">
+                        <p>ชั้น 1</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_01.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 2</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_02.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 3</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_03.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 4</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_04.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 5</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_05.webp" alt="">
+                    </div>
+                </div>
+                <div class="plan deactive">
+                    <div class="item">
+                        <p>ชั้น 1</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_01.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 2</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_02.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 3</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_03.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 4</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_04.webp" alt="">
+                    </div>
+                    <div class="item">
+                        <p>ชั้น 5</p>
+                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_05.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
         
     <!-- Footer -->
     <?php include "footer.php"; ?>
-    
     
     <script src="./assets/js/_dorm_plan.js"></script>    
 </body>    
