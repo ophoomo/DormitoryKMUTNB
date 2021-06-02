@@ -118,7 +118,6 @@
     <!-- Footer -->
     <?php include "footer.php"; ?>
     
-    
     <script src="./assets/js/_room_sample.js"></script>    
     <!-- <script src="./assets/js/medium-zoomImg.min.js"></script> -->
 </body>    

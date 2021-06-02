@@ -82,7 +82,7 @@
                 background-color: rgb(173, 55, 0);
             }
         }
-        .areaRegister {
+        .areaLinkRegister {
             cursor: pointer;
             margin-top: 40px;
             display: flex;
@@ -97,7 +97,7 @@
             &:hover {
                 background-color: $colorDark + 20;
             }
-            .btnRegister {
+            .btnLinkRegister {
                 display: flex;
                 margin-top: 12px;
                 font-size: 16px;
@@ -148,13 +148,13 @@
                 border-radius: 5px;
                 margin-bottom: 36px;
             }
-            .areaRegister {
+            .areaLinkRegister {
                 margin-top: 40px;
                 bottom: 0;
                 width: 100%;
                 height: 40px;
                 border-radius: 0 0 10px 10px;
-                .btnRegister {
+                .btnLinkRegister {
                     text-decoration: none !important;
                     margin-top: 12px;
                     font-size: 16px;

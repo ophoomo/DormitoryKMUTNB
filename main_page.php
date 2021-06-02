@@ -17,7 +17,7 @@
     
     <div class="container">
         <div class="container_slide">
-            <div id="slideBanner" class="slide" style="background: url(./assets/img/dorm/dorm_women_01.webp);"></div>
+            <div id="slideBanner" class="slide" style="background: url('./assets/img/dorm/women_01.webp');"></div>
         </div>
         <div class="marquee userSelectNone">
             <marquee>

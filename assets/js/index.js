@@ -2,8 +2,8 @@
 // Variable chageImgSlide
 let indexImageSlide = 0;
 let images = [];
-images[0] = "url('../img/dorm/women_01.webp')";
-images[1] = "url('../img/dorm/women_02.webp')";
+images[0] = "url('./assets/img/dorm/women_01.webp')";
+images[1] = "url('./assets/img/dorm/women_02.webp')";
 
 function changeImg() {
     let bannerChageImage = document.getElementById("slide");

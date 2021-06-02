@@ -20,15 +20,361 @@
     <?php include "navbar.php"; ?>
         
     <div class="container">
-        <div class="register">
-            
-        </div>
+        <form action="">
+            <div class="areaRegister">
+
+                <div class="header">
+                    <div class="title userSelectNone">
+                        <p>สมัครสมาชิกหอพัก</p>
+                    </div>
+
+                    <div class="areaCheckStatus">
+                        <div class="checkStatusStd userSelectNone" required>
+                            <input name="checkStatus" type="radio" value="stdOld" required><span>นักศึกษาหอพัก</span>
+                            <input name="checkStatus" type="radio" value="stdNew" required><span>นักศึกษาใหม่<?php echo "ปี 2" . (date('y')+543) ?></span>
+                        </div>
+                        <div class="description"> 
+                            <p>**กรณีที่เป็นนักศึกษาเก่าย้ายออกจากหอพักแล้วประสงค์จะเข้าพักใหม่กรุณาติดต่าเจ้าหน้าที่</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ข้อมูลนักศึกษา -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลนักศึกษา</p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>คำนำหน้า</p>
+                            <select name="sex" id="">
+                                <option value="นาย">นาย</option>
+                                <option value="นาง">นาง</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ชื่อ</p>
+                            <input name="firstname" type="text" placeholder="ชื่อ">
+                        </div>
+                        <div class="question">
+                            <p>นามสกุล</p>
+                            <input name="lastname" type="text" placeholder="นามสกุล">
+                        </div>
+                        <div class="question">
+                            <p>เลขบัตรประจำตัวประชาชน</p>
+                            <input name="idCard" type="text" placeholder="เลขบัตรประจำตัวประชาชน">
+                        </div>
+                        <div class="question">
+                            <p>รหัสนักศึกษา</p>
+                            <input name="idStd" type="text" placeholder="เลขบัตรประจำตัวประชาชน">
+                        </div>
+                        <div class="question">
+                            <p>ชื่อเล่น</p>
+                            <input name="nickname" type="text" placeholder="ชื่อเล่น">
+                        </div>
+                        <div class="question">
+                            <p>หมู่เลือด</p>
+                            <select name="blood_type" id="blood_type">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="O">O</option>
+                                <option value="AB">AB</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ศาสนา</p>
+                            <select name="religion" id="religion">
+                                <option value="พุทธ">พุทธ</option>
+                                <option value="คริสต์">คริสต์</option>
+                                <option value="อิสลาม">อิสลาม</option>
+                                <option value="ฮินดู">ฮินดู</option>
+                                <option value="ซิกข์">ซิกข์</option>
+                                <option value="ไม่มีศาสนา">ไม่นับถือศาสนา</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>วัดเกิด</p>
+                            <input name="birthday" type="date" placeholder="วัดเกิด">
+                        </div>
+                        <div class="question">
+                            <p>คณะ</p>
+                            <select name="faculty" id="faculty">
+                                <option selected="" value="base">- กรุณาเลือกคณะ -</option>
+                                <option value="engineer">คณะวิศวกรรมศาสตร์</option>
+                                <option value="ai">คณะอุตสาหกรรมเกษตร</option>
+                                <option value="fitm">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</option>
+                                <option value="bas">คณะบริหารธุรกิจและอุตสาหกรรมบริการ</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>สาขา</p>
+                            <div class="branch">
+                                <select name="Inse">
+                                    <div class="engineer">
+                                        <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                        <option value="inse">วิศวกรรมระบบเครื่องมือวัด (InSE)</option>
+                                    </div>
+                                </select>
+                            </div>
+    
+                            <div class="branch deactive">
+                                <select name="fitm" id="">
+                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                    <option value="1141">การจัดการอุตสาหกรรม (IMT)</option>
+                                    <option value="1142">การจัดการอุตสาหกรรม (SMIM)</option>
+                                    <option value="1143">เทคโนโลยีสารสนเทศ (IT)</option>
+                                    <option value="1144">เทคโนโลยีสารสนเทศ (ITI)</option>
+                                    <option value="1145">วิทยาการสารสนเทศประยุกต์ (MITM)</option>
+                                    <option value="1146">วิทยาการสารสนเทศประยุกต์ (SMITM)</option>
+                                    <option value="1147">คอมพิวเตอร์ช่วยออกแบบและบริหารงานก่อสร้าง (CA)</option>
+                                    <option value="1148">คอมพิวเตอร์ช่วยออกแบบและบริหารงานก่อสร้าง (CDM)</option>
+                                    <option value="1149">เทคโนโลยีเครื่องจักรกลเกษตร (ATM)</option>
+                                    <option value="1150">เทคโนโลยีเครื่องจักรกลเกษตร (TAM)</option>
+                                    <option value="1151">เทคโนโลยีเครื่องจักรกลเกษตร (TAT)</option>
+                                </select>
+                            </div>
+
+                            <div class="branch deactive">
+                                <select name="major">
+                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                    <option value="1136">วิทยาศาสตร์การอาหารและโภชนาการ (FSN)</option>
+                                    <option value="1137">เทคโนโลยีอุตสาหกรรมเกษตรและการจัดการ (FSM)</option>
+                                    <option value="1138">พัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร (APD)</option>
+                                    <option value="1139">นวัตกรรมและเทคโนโลยีการพัฒนาผลิตภัณฑ์ (IPD)</option>
+                                </select>
+                            </div>
+
+                            <div class="branch deactive">
+                                <select name="major">
+                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                    <option value="1153">บริหารธุรกิจอุตสาหกรรมและการค้า (IBT)</option>
+                                    <option value="1154">บริหารธุรกิจอุตสาหกรรมและการค้า (IBTT)</option>
+                                    <option value="1155">บริหารธุรกิจอุตสาหกรรมและการค้า (MIBT)</option>
+                                    <option value="1156">บริหารธุรกิจอุตสาหกรรมและการค้า (SMIBT)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+    
+                <!-- ข้อมูลติดต่อ -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลติดต่อ</p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>เบอร์โทรศัพท์</p>
+                            <input name="phone" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <div class="question">
+                            <p>อีเมลล์</p>
+                            <input name="email" type="email" placeholder="อีเมลล์">
+                        </div>
+                        <div class="question">
+                            <p>บ้านเลขที่</p>
+                            <input name="email" type="text" placeholder="บ้านเลขที่">
+                        </div>
+                        <div class="question">
+                            <p>ชื่อหมู่บ้าน (ถ้ามี)</p>
+                            <input name="email" type="text" placeholder="ชื่อหมู่บ้าน (ถ้ามี)">
+                        </div>
+                        <div class="question">
+                            <p>หมู่ที่</p>
+                            <input name="email" type="text" placeholder="หมู่ที่">
+                        </div>
+                        <div class="question">
+                            <p>ซอย</p>
+                            <input name="email" type="text" placeholder="ซอย">
+                        </div>
+                        <div class="question">
+                            <p>ถนน</p>
+                            <input name="email" type="text" placeholder="ถนน">
+                        </div>
+                        <div class="question">
+                            <p>อำเภอ / เขต</p>
+                            <input name="idCard" type="text" placeholder="อำเภอ / เขต">
+                        </div>
+                        <div class="question">
+                            <p>ตำบล / แขวง</p>
+                            <input name="nickname" type="text" placeholder="ตำบล / แขวง">
+                        </div>
+                        <div class="question">
+                            <p>จังหวัด</p>
+                            <input name="province" type="text" placeholder="จังหวัด">
+                        </div>
+                        <div class="question">
+                            <p>รหัสไปรษณี</p>
+                            <input name="zipCode" type="text" placeholder="รหัสไปรษณี">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ประวัติครอบครัวผู้สมัคร : บิดา -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลครอบครัวผู้สมัคร : บิดา</p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>คำนำหน้า</p>
+                            <select name="sexParents1" id="">
+                                <option value="นาย">นาย</option>
+                                <option value="นาง">นาง</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ชื่อ</p>
+                            <input name="firstnameParents1" type="text" placeholder="ชื่อ">
+                            </div>
+                        <div class="question">
+                            <p>นามสกุล</p>
+                            <input name="lastnameParents1" type="text" placeholder="นามสกุล">
+                        </div>
+                        <div class="question">
+                            <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
+                            <input name="telParents1" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <div class="question">
+                            <p>สถานะ</p>
+                            <select name="statusParents1" id="blood_type">
+                                <option value="ยังมีชิวิตอยู่">ยังมีชีวิตอยู่</option>
+                                <option value="ถึงแก่กรรม">ถึงแก่กรรม</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- ประวัติครอบครัวผู้สมัคร : มารดา -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลครอบครัวผู้สมัคร : มารดา</p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>คำนำหน้า</p>
+                            <select name="sexParents2" id="">
+                                <option value="นาย">นาย</option>
+                                <option value="นาง">นาง</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ชื่อ</p>
+                            <input name="firstnameParents2" type="text" placeholder="ชื่อ">
+                            </div>
+                        <div class="question">
+                            <p>นามสกุล</p>
+                            <input name="lastnameParents2" type="text" placeholder="นามสกุล">
+                        </div>
+                        <div class="question">
+                            <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
+                            <input name="telParents2" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <div class="question">
+                            <p>สถานะ</p>
+                            <select name="statusParents2" id="blood_type">
+                                <option value="ยังมีชิวิตอยู่">ยังมีชีวิตอยู่</option>
+                                <option value="ถึงแก่กรรม">ถึงแก่กรรม</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อมูลผู้ติดต่อฉุกเฉิน 1 -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลผู้ติดต่อฉุกเฉิน 1 
+                            <span style="font-size: 14px; color: black; font-weight: 400;">
+                                <input id="useDataAfter1" type="radio">ใช้ข้อมูลเดียวกับบิดา
+                            </span> 
+                        </p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>คำนำหน้า</p>
+                            <select name="sexEmergency1" id="">
+                                <option value="นาย">นาย</option>
+                                <option value="นาง">นาง</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ชื่อ</p>
+                            <input name="firstnameEmergency1" type="text" placeholder="ชื่อ">
+                            </div>
+                        <div class="question">
+                            <p>นามสกุล</p>
+                            <input name="lastnameEmergency1" type="text" placeholder="นามสกุล">
+                        </div>
+                        <div class="question">
+                            <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
+                            <input name="telEmergency1" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <div class="question">
+                            <p>ผู้ติดต่อฉุกเฉินคนนี้เป็นใคร</p>
+                            <input name="relationshipEmergency1" type="text" placeholder="โปรดระบุ เช่น พ่อ, แม่, พี่, ลุง">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อมูลผู้ติดต่อฉุกเฉิน 2 -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลผู้ติดต่อฉุกเฉิน 2
+                            <span style="font-size: 14px; color: black; font-weight: 400;">
+                                <input id="useDataAfter2" type="radio">ใช้ข้อมูลเดียวกับมารดา
+                            </span> 
+                        </p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>คำนำหน้า</p>
+                            <select name="sexEmergency2" id="">
+                                <option value="นาย">นาย</option>
+                                <option value="นาง">นาง</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>ชื่อ</p>
+                            <input name="firstnameEmergency2" type="text" placeholder="ชื่อ">
+                            </div>
+                        <div class="question">
+                            <p>นามสกุล</p>
+                            <input name="lastnameEmergency2" type="text" placeholder="นามสกุล">
+                        </div>
+                        <div class="question">
+                            <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
+                            <input name="telEmergency2" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+                        <div class="question">
+                            <p>ผู้ติดต่อฉุกเฉินคนนี้เป็นใคร</p>
+                            <input name="relationshipEmergency2" type="text" placeholder="โปรดระบุ เช่น พ่อ, แม่, พี่, ลุง">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areabutton">
+                    <input type="submit" value="สมัครสมาชิก">
+                    <input type="reset" value="ล้างข้อมูล">
+                </div>
+
+            </div>
+        </form>
     </div>
-        
+    
     <!-- Footer -->
     <?php include "footer.php"; ?>
     
-    
-    <script src="./assets/js/_register.js"></script>    
+    <script>
+        var e = document.getElementById("faculty");
+        function show() {
+            var strUser = e.options[e.selectedIndex].value;
+            console.log(strUser);
+            alert(strUser);
+        }
+        // e.onchange = show;
+        document.getElementById("faculty").onlick = () => {
+            show();
+        }
+    </script>
 </body>    
 </html>

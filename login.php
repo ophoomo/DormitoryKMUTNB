@@ -12,7 +12,6 @@
 <body>
     
     <div class="container_login">
-        
         <form action="#">
             <div class="areaLogin">
                 <p>เข้าสู่ระบบ</p>
@@ -24,8 +23,8 @@
                 </div>
                 <a href="forgot.php" class="forgotPassword">ลืมรหัสผ่าน</a>
                 <input class="btnLogin" type="submit" value="เข้าสู่ระบบ">
-                <a href="register.php" class="areaRegister">
-                    <p class="btnRegister" href="register.php">สมัครสมาชิก</p>
+                <a href="register.php" class="areaLinkRegister">
+                    <p class="btnLinkRegister" href="register.php">สมัครสมาชิก</p>
                 </a>
             </div>
         </form>
