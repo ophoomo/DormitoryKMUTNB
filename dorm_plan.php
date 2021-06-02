@@ -14,9 +14,19 @@
         #container_navbar { background-color: rgb(110, 20, 20) !important; }
         /* #container_navbar { background-color: rgb(80, 20, 0) !important; } */
     </style>
-<body>
+<body id="test">
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
+
+    <div id="container_ImageZoom" class="">
+    <!-- <div id="container_ImageZoom" class="deactive"> -->
+        <div id="areaImageZoom">
+            <div id="closeBtnImageZoom"><i class="fas fa-times fa-2x"></i></div>
+            <div id="imgZoom">
+            </div>
+        </div>
+        <div id="overlayImageZoom"></div>
+    </div>
         
     <div class="container">
         <div class="areaPlan">
@@ -33,71 +43,71 @@
                     <div class="btn btn3"><p>หอหญิง 2</p></div>
                 </div>
             </div>
-            <div class="session2">
+            <div class="session2 userSelectNone">
                 <div class="plan">
                     <div class="item">
                         <p>ชั้น 1</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_male_01.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(1,1);" src="./assets/img/dorm/plan_male_01.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 2</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_male_02.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(1,2);" src="./assets/img/dorm/plan_male_02.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 3</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_male_03.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(1,3);" src="./assets/img/dorm/plan_male_03.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 4</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_male_04.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(1,4);" src="./assets/img/dorm/plan_male_04.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 5</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_male_05.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(1,5);" src="./assets/img/dorm/plan_male_05.webp" alt="">
                     </div>
                 </div>
                 <div class="plan deactive">
                     <div class="item">
                         <p>ชั้น 1</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_01.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,1);" src="./assets/img/dorm/plan_famale_1_01.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 2</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_02.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,2);" src="./assets/img/dorm/plan_famale_1_02.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 3</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_03.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,3);" src="./assets/img/dorm/plan_famale_1_03.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 4</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_04.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,4);" src="./assets/img/dorm/plan_famale_1_04.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 5</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_1_05.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,5);" src="./assets/img/dorm/plan_famale_1_05.webp" alt="">
                     </div>
                 </div>
                 <div class="plan deactive">
                     <div class="item">
                         <p>ชั้น 1</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_01.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,1);" src="./assets/img/dorm/plan_famale_2_01.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 2</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_02.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,2);" src="./assets/img/dorm/plan_famale_2_02.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 3</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_03.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,3);" src="./assets/img/dorm/plan_famale_2_03.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 4</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_04.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,4);" src="./assets/img/dorm/plan_famale_2_04.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 5</p>
-                        <img class="zoomImg" src="./assets/img/dorm/plan_famale_2_05.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,5);" src="./assets/img/dorm/plan_famale_2_05.webp" alt="">
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@
         #container_navbar { background-color: rgb(110, 20, 20) !important; }
         /* #container_navbar { background-color: rgb(80, 20, 0) !important; } */
     </style>
-<body>
+<body id="test">
 
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
@@ -77,40 +77,40 @@
         
         <div class="areaImage">
             <div class="dorm">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_01.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_02.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_03.webp" alt="">
-                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_male_04.webp" alt=""> -->
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_05.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_06.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_07.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_08.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_male_09.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,1);" src="./assets/img/dorm/room_male_01.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,2);" src="./assets/img/dorm/room_male_02.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,3);" src="./assets/img/dorm/room_male_03.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,4);" src="./assets/img/dorm/room_male_04.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,5);" src="./assets/img/dorm/room_male_05.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,6);" src="./assets/img/dorm/room_male_06.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,7);" src="./assets/img/dorm/room_male_07.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,8);" src="./assets/img/dorm/room_male_08.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(1,9);" src="./assets/img/dorm/room_male_09.webp" alt="">
+                <!-- <img id="zoomImg" onclick="clickZoom(1,10);" src="./assets/img/dorm/room_male_10.webp" alt=""> -->
             </div>
             <div class="dorm deactive">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_01.webp" alt="">                 
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_02.webp" alt="">                 
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_03.webp" alt="">
-                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_04.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_1_05.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_06.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_07.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_08.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_09.webp" alt=""> -->
-                <!-- <img class="zoomImg" src="./assets/img/dorm/room_famele_1_10.webp" alt=""> -->
-            
+                <img id="zoomImg" onclick="clickZoom(2,1);" src="./assets/img/dorm/room_female_1_01.webp" alt="">                 
+                <img id="zoomImg" onclick="clickZoom(2,2);" src="./assets/img/dorm/room_female_1_02.webp" alt="">                 
+                <img id="zoomImg" onclick="clickZoom(2,3);" src="./assets/img/dorm/room_female_1_03.webp" alt="">
+                <!-- <img id="zoomImg" onclick="clickZoom(2,4);" src="./assets/img/dorm/room_female_1_04.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,5);" src="./assets/img/dorm/room_female_1_05.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,6);" src="./assets/img/dorm/room_famele_1_06.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,7);" src="./assets/img/dorm/room_famele_1_07.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,8);" src="./assets/img/dorm/room_famele_1_08.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,9);" src="./assets/img/dorm/room_famele_1_09.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(2,10);" src="./assets/img/dorm/room_famele_1_10.webp" alt=""> -->
             </div>
             <div class="dorm deactive">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_01.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_02.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_03.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_04.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_05.webp" alt="">
-                <!-- <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_06.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_07.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_08.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_09.webp" alt="">
-                <img class="zoomImg" src="./assets/img/dorm/rorm_female_2_10.webp" alt=""> -->
+                <img id="zoomImg" onclick="clickZoom(3,1);" src="./assets/img/dorm/room_female_2_01.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(3,2);" src="./assets/img/dorm/room_female_2_02.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(3,3);" src="./assets/img/dorm/room_female_2_03.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(3,4);" src="./assets/img/dorm/room_female_2_04.webp" alt="">
+                <img id="zoomImg" onclick="clickZoom(3,5);" src="./assets/img/dorm/room_female_2_05.webp" alt="">
+                <!-- <img id="zoomImg" onclick="clickZoom(3,6);" src="./assets/img/dorm/room_female_2_06.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(3,7);" src="./assets/img/dorm/room_female_2_07.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(3,8);" src="./assets/img/dorm/room_female_2_08.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(3,9);" src="./assets/img/dorm/room_female_2_09.webp" alt=""> -->
+                <!-- <img id="zoomImg" onclick="clickZoom(3,10);" src="./assets/img/dorm/room_female_2_10.webp" alt=""> -->
             </div>
         </div>
     </div>
