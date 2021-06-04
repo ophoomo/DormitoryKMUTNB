@@ -14,10 +14,20 @@
         #container_navbar { background-color: rgb(110, 20, 20) !important; }
         /* #container_navbar { background-color: rgb(80, 20, 0) !important; } */
     </style>
-<body id="test">
+<body>
 
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
+
+    <div id="container_ImageZoom" class="deactive">
+    <div id="closeBtnImageZoom"><i class="fas fa-times fa-2x"></i></div>
+    <div id="areaImageRoomZoom">
+        <div id="zoom">
+            <img id="imgZoom" src="" alt="" width="100%" height="100%">
+        </div>
+    </div>
+        <div id="overlayImageZoom"></div>
+    </div>
         
     <div class="container">
         <div class="areaSample">
@@ -85,7 +95,7 @@
                 <img id="zoomImg" onclick="clickZoom(1,6);" src="./assets/img/dorm/room_male_06.webp" alt="">
                 <img id="zoomImg" onclick="clickZoom(1,7);" src="./assets/img/dorm/room_male_07.webp" alt="">
                 <img id="zoomImg" onclick="clickZoom(1,8);" src="./assets/img/dorm/room_male_08.webp" alt="">
-                <img id="zoomImg" onclick="clickZoom(1,9);" src="./assets/img/dorm/room_male_09.webp" alt="">
+                <!-- <img id="zoomImg" onclick="clickZoom(1,9);" src="./assets/img/dorm/room_male_09.webp" alt=""> -->
                 <!-- <img id="zoomImg" onclick="clickZoom(1,10);" src="./assets/img/dorm/room_male_10.webp" alt=""> -->
             </div>
             <div class="dorm deactive">

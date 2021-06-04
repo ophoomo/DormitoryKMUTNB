@@ -25,6 +25,7 @@ function chageText(status) {
 
 
 // Zoom image popup close popup
+var run = true;
 var showImg = document.getElementById('container_ImageZoom');
 
 document.getElementById('closeBtnImageZoom').onclick = () => {
@@ -40,14 +41,9 @@ document.onkeydown = function(evt) {
     }
 };
 
-var run = true;
-
 function activeZoomPopup() {
     showImg.classList.remove('deactive');
 }
-// End
-
-
 // loadImage for Zoom Image
 var showImage = document.getElementById("imgZoom");
 window.onload = getImgName;
@@ -57,10 +53,9 @@ function getImgName(strImgPath) {
         activeZoomPopup();
     }
     run = false;
-    let strPath = "url('./assets/img/dorm/plan_male_01.webp')";
-    // let strPath = "url('./assets/img/dorm/plan_" + strImgPath + ".webp')";
-    console.log(strPath);
-    showImage.style.background = strPath;
+    let strPath = "./assets/img/dorm/plan_" + strImgPath + ".webp";
+    document.getElementById("imgZoom").src = strPath;
+    console.log(strPath)
 }
 
 function clickZoom(group, item) {

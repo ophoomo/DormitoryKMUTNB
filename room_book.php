@@ -21,7 +21,37 @@
     <?php include "navbar.php"; ?>
         
     <div class="container">
-        
+        <div class="areaBook">
+            <div class="titleBook">
+                <p>จองห้องพัก</p>
+            </div>
+            <form action="">
+                <div class="areaCard deactive">
+                    <div class="dorm">
+                        <div class="cardRoom">
+                            <div class="roomNumber">
+                                <p>418</p>
+                            </div>
+                            <div class="listPerson">
+                                <p>สมชัย กุญเชียงทอง</p>
+                                <p>สมชัย กุญเชียงทอง</p>
+                                <p>สมชัย กุญเชียงทอง</p>
+                                <p>สมชัย กุญเชียงทอง</p>
+                                <p>สมชัย กุญเชียงทอง</p>
+                            </div>
+                            <div class="statusRoom">
+                                <p>5/5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="areaBtnBook">
+                    <button>
+                        <p>จองหอพัก</p>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
         
     <!-- Footer -->

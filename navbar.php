@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="item destroyAdminLogin">
-                <a href="room_book.php">จองหอพัก</a>
+                <a href="room_book.php">จองห้องพัก</a>
             </div>
             <div class="item adminLogin" style="display: none;">
                 <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
@@ -57,7 +57,7 @@
                 </div>
         </div>
         <div class="item destroyAdminLogin">
-            <a href="room_book.php">จองหอพัก</a>
+            <a href="room_book.php">จองห้องพัก</a>
         </div>
         <div class="item adminLogin" style="display: none;">
             <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>

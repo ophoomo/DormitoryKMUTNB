@@ -34,14 +34,39 @@ function chageStatus(status) {
 }
 // End
 
+
+// Zoom image popup close popup
+var run = true;
+var showImg = document.getElementById('container_ImageZoom');
+
+document.getElementById('closeBtnImageZoom').onclick = () => {
+    showImg.classList.add('deactive');
+}
+document.getElementById('overlayImageZoom').onclick = () => {
+    showImg.classList.add('deactive');
+}
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode === 27) {
+        showImg.classList.add('deactive');
+    }
+};
+
+function activeZoomPopup() {
+    showImg.classList.remove('deactive');
+}
 // loadImage for Zoom Image
-var showImage = document.getElementById("test");
+var showImage = document.getElementById("imgZoom");
 window.onload = getImgName;
 
 function getImgName(strImgPath) {
-    let strPath = "url('./assets/img/dorm/room_" + strImgPath + ".webp')";
-    console.log(strPath);
-    showImage.style.background = strPath;
+    if (run === false) {
+        activeZoomPopup();
+    }
+    run = false;
+    let strPath = "./assets/img/dorm/room_" + strImgPath + ".webp";
+    document.getElementById("imgZoom").src = strPath;
+    // console.log(strPath)
 }
 
 function clickZoom(group, item) {

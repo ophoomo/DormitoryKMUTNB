@@ -14,20 +14,20 @@
         #container_navbar { background-color: rgb(110, 20, 20) !important; }
         /* #container_navbar { background-color: rgb(80, 20, 0) !important; } */
     </style>
-<body id="test">
+<body>
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
 
-    <div id="container_ImageZoom" class="">
-    <!-- <div id="container_ImageZoom" class="deactive"> -->
-        <div id="areaImageZoom">
-            <div id="closeBtnImageZoom"><i class="fas fa-times fa-2x"></i></div>
-            <div id="imgZoom">
-            </div>
+    <div id="container_ImageZoom" class="deactive">
+    <div id="closeBtnImageZoom"><i class="fas fa-times fa-2x"></i></div>
+    <div id="areaImageZoom">
+        <div id="zoom">
+            <img id="imgZoom" src="" alt="" width="100%" height="100%">
         </div>
+    </div>
         <div id="overlayImageZoom"></div>
     </div>
-        
+
     <div class="container">
         <div class="areaPlan">
             <div class="session1 userSelectNone">
@@ -69,45 +69,45 @@
                 <div class="plan deactive">
                     <div class="item">
                         <p>ชั้น 1</p>
-                        <img id="zoomImg" onclick="clickZoom(2,1);" src="./assets/img/dorm/plan_famale_1_01.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,1);" src="./assets/img/dorm/plan_female_1_01.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 2</p>
-                        <img id="zoomImg" onclick="clickZoom(2,2);" src="./assets/img/dorm/plan_famale_1_02.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,2);" src="./assets/img/dorm/plan_female_1_02.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 3</p>
-                        <img id="zoomImg" onclick="clickZoom(2,3);" src="./assets/img/dorm/plan_famale_1_03.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,3);" src="./assets/img/dorm/plan_female_1_03.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 4</p>
-                        <img id="zoomImg" onclick="clickZoom(2,4);" src="./assets/img/dorm/plan_famale_1_04.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,4);" src="./assets/img/dorm/plan_female_1_04.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 5</p>
-                        <img id="zoomImg" onclick="clickZoom(2,5);" src="./assets/img/dorm/plan_famale_1_05.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(2,5);" src="./assets/img/dorm/plan_female_1_05.webp" alt="">
                     </div>
                 </div>
                 <div class="plan deactive">
                     <div class="item">
                         <p>ชั้น 1</p>
-                        <img id="zoomImg" onclick="clickZoom(3,1);" src="./assets/img/dorm/plan_famale_2_01.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,1);" src="./assets/img/dorm/plan_female_2_01.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 2</p>
-                        <img id="zoomImg" onclick="clickZoom(3,2);" src="./assets/img/dorm/plan_famale_2_02.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,2);" src="./assets/img/dorm/plan_female_2_02.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 3</p>
-                        <img id="zoomImg" onclick="clickZoom(3,3);" src="./assets/img/dorm/plan_famale_2_03.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,3);" src="./assets/img/dorm/plan_female_2_03.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 4</p>
-                        <img id="zoomImg" onclick="clickZoom(3,4);" src="./assets/img/dorm/plan_famale_2_04.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,4);" src="./assets/img/dorm/plan_female_2_04.webp" alt="">
                     </div>
                     <div class="item">
                         <p>ชั้น 5</p>
-                        <img id="zoomImg" onclick="clickZoom(3,5);" src="./assets/img/dorm/plan_famale_2_05.webp" alt="">
+                        <img id="zoomImg" onclick="clickZoom(3,5);" src="./assets/img/dorm/plan_female_2_05.webp" alt="">
                     </div>
                 </div>
             </div>

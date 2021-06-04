@@ -38,6 +38,28 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Username for manager system -->
+                <div class="session userSelectNone">
+                    <div class="titleSection userSelectNone">
+                        <p>ข้อมูลสำหรับเข้าใช้งานระบบ</p>
+                    </div>
+                    <div class="areaInput">
+                        <div class="question">
+                            <p>ชื่อผู้ใช้งาน</p>
+                            <input name="username" type="text" placeholder="Username">
+                        </div>
+                        <div class="question">
+                            <p>รหัสผ่าน</p>
+                            <input name="password" type="password" placeholder="Password">
+                        </div>
+                        <div class="question">
+                            <p>ยืนยันรหัสผ่าน</p>
+                            <input name="checkPass" type="password" placeholder="Password again">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ข้อมูลนักศึกษา -->
                 <div class="session userSelectNone">
                     <div class="titleSection userSelectNone">
@@ -97,7 +119,7 @@
                         </div>
                         <div class="question">
                             <p>คณะ</p>
-                            <select name="faculty" id="faculty">
+                            <select onchange="selectFaculty()" name="faculty" id="faculty">
                                 <option selected="" value="base">- กรุณาเลือกคณะ -</option>
                                 <option value="engineer">คณะวิศวกรรมศาสตร์</option>
                                 <option value="ai">คณะอุตสาหกรรมเกษตร</option>
@@ -107,7 +129,14 @@
                         </div>
                         <div class="question">
                             <p>สาขา</p>
-                            <div class="branch">
+
+                            <div class="branchNonSelect">
+                                <select>
+                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                </select>
+                            </div>
+
+                            <div class="branch deactive">
                                 <select name="Inse">
                                     <div class="engineer">
                                         <option selected="" value="none">- กรุณาเลือกสาขา -</option>
@@ -116,6 +145,16 @@
                                 </select>
                             </div>
     
+                            <div class="branch deactive">
+                                <select name="major">
+                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
+                                    <option value="1136">วิทยาศาสตร์การอาหารและโภชนาการ (FSN)</option>
+                                    <option value="1137">เทคโนโลยีอุตสาหกรรมเกษตรและการจัดการ (FSM)</option>
+                                    <option value="1138">พัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร (APD)</option>
+                                    <option value="1139">นวัตกรรมและเทคโนโลยีการพัฒนาผลิตภัณฑ์ (IPD)</option>
+                                </select>
+                            </div>
+
                             <div class="branch deactive">
                                 <select name="fitm" id="">
                                     <option selected="" value="none">- กรุณาเลือกสาขา -</option>
@@ -136,16 +175,6 @@
                             <div class="branch deactive">
                                 <select name="major">
                                     <option selected="" value="none">- กรุณาเลือกสาขา -</option>
-                                    <option value="1136">วิทยาศาสตร์การอาหารและโภชนาการ (FSN)</option>
-                                    <option value="1137">เทคโนโลยีอุตสาหกรรมเกษตรและการจัดการ (FSM)</option>
-                                    <option value="1138">พัฒนาผลิตภัณฑ์อุตสาหกรรมเกษตร (APD)</option>
-                                    <option value="1139">นวัตกรรมและเทคโนโลยีการพัฒนาผลิตภัณฑ์ (IPD)</option>
-                                </select>
-                            </div>
-
-                            <div class="branch deactive">
-                                <select name="major">
-                                    <option selected="" value="none">- กรุณาเลือกสาขา -</option>
                                     <option value="1153">บริหารธุรกิจอุตสาหกรรมและการค้า (IBT)</option>
                                     <option value="1154">บริหารธุรกิจอุตสาหกรรมและการค้า (IBTT)</option>
                                     <option value="1155">บริหารธุรกิจอุตสาหกรรมและการค้า (MIBT)</option>
@@ -153,11 +182,10 @@
                                 </select>
                             </div>
                         </div>
-                        
-                        
                     </div>
                 </div>
     
+                
                 <!-- ข้อมูลติดต่อ -->
                 <div class="session userSelectNone">
                     <div class="titleSection userSelectNone">
@@ -178,7 +206,7 @@
                         </div>
                         <div class="question">
                             <p>ชื่อหมู่บ้าน (ถ้ามี)</p>
-                            <input name="email" type="text" placeholder="ชื่อหมู่บ้าน (ถ้ามี)">
+                            <input name="email" type="text" placeholder="ชื่อหมู่บ้าน">
                         </div>
                         <div class="question">
                             <p>หมู่ที่</p>
@@ -285,7 +313,7 @@
                     <div class="titleSection userSelectNone">
                         <p>ข้อมูลผู้ติดต่อฉุกเฉิน 1 
                             <span style="font-size: 14px; color: black; font-weight: 400;">
-                                <input id="useDataAfter1" type="radio">ใช้ข้อมูลเดียวกับบิดา
+                                <input id="useDataAfter1" type="checkbox">ใช้ข้อมูลเดียวกับบิดา
                             </span> 
                         </p>
                     </div>
@@ -321,7 +349,7 @@
                     <div class="titleSection userSelectNone">
                         <p>ข้อมูลผู้ติดต่อฉุกเฉิน 2
                             <span style="font-size: 14px; color: black; font-weight: 400;">
-                                <input id="useDataAfter2" type="radio">ใช้ข้อมูลเดียวกับมารดา
+                                <input id="useDataAfter2" type="checkbox">ใช้ข้อมูลเดียวกับมารดา
                             </span> 
                         </p>
                     </div>
@@ -353,8 +381,18 @@
                 </div>
 
                 <div class="areabutton">
-                    <input type="submit" value="สมัครสมาชิก">
-                    <input type="reset" value="ล้างข้อมูล">
+                    <div class="btnRegis">
+                            <button class="button">
+                                <i class="far fa-plus-square fa-lg"></i>
+                                สมัครสมาชิก
+                            </button>
+                    </div>
+                    <div class="btnReset">
+                        <button class="button" type="reset">    
+                            <i class="fas fa-ban"></i>
+                            ล้างข้อมูล
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -364,17 +402,6 @@
     <!-- Footer -->
     <?php include "footer.php"; ?>
     
-    <script>
-        var e = document.getElementById("faculty");
-        function show() {
-            var strUser = e.options[e.selectedIndex].value;
-            console.log(strUser);
-            alert(strUser);
-        }
-        // e.onchange = show;
-        document.getElementById("faculty").onlick = () => {
-            show();
-        }
-    </script>
+    <script src="./assets/js/_register.js"></script>
 </body>    
 </html>
