@@ -19,13 +19,13 @@
             <div class="item destroyAdminLogin">
                 <a href="room_book.php">จองห้องพัก</a>
             </div>
-            <div class="item adminLogin" style="display: none;">
+            <div class="item adminLogin deactive">
                 <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
             </div>
             <div id="popupLogin" class="item destroyUserLogin">
                 <a href="login.php">เข้าสู่ระบบ/สมัครสมาชิก</a>
             </div>
-            <div class="item userLogin" style="display: none;">
+            <div class="item userLogin deactive">
                 <a href="profile.php"><span>สวัสดี</span>ชิษณุพงศ์</a>
             </div>
         </div>
@@ -42,7 +42,7 @@
         <i class="fas fa-times"></i>
     </div>
     <div class="menu">
-        <div class="item userLogin" style="display: none;">
+        <div class="item userLogin deactive">
             <a href="profile.php"><span>สวัสดี </span>ชิษณุพงศ์</a>
         </div>
         <div class="item">
@@ -59,12 +59,12 @@
         <div class="item destroyAdminLogin">
             <a href="room_book.php">จองห้องพัก</a>
         </div>
-        <div class="item adminLogin" style="display: none;">
+        <div class="item adminLogin deactive">
             <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
         </div>
-        <!-- <div class="item userLogin">
-            <a href="##" style="font-size: 14px !important; transition: 0.2s !important;">ออกจากระบบ</a>
-        </div> -->
+        <div class="item userLogin">
+            <a href="logout.php" style="font-size: 14px !important; transition: 0.2s !important;">ออกจากระบบ</a>
+        </div>
         <div id="popupLogin" class="item destroyUserLogin">
             <a href="login.php">เข้าสู่ระบบ/สมัครสมาชิก</a>
         </div>

@@ -126,7 +126,6 @@
     
     <?php include "footer.php"; ?>
     
-    
     <script src="./assets/js/_mainPage.js"></script>    
 </body>    
 </html>

@@ -62,15 +62,18 @@ body {
 }
 
 @import "_resetBrowser";
-@import "_index";
 @import "_navbar";
 @import "_footer";
+@import "_index";
+@import "_mainPage";
 @import "_login";
 @import "_register";
-@import "_mainPage";
 @import "_dormFee";
-@import "_roomSample";
 @import "_dormPlan";
+@import "_roomSample";
+@import "_roomBook";
+@import "_profile";
+@import "_forgot";
 // verySmall size don't support
 @media only screen and (max-width: 280px) {
     * {

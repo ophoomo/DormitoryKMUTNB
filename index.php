@@ -41,9 +41,9 @@
                 </div>
                 <div class="menu">
                     <a href="main_page.php" class="btn_firstPage">หน้าหลัก</a>
-                    <a href="dorm_plan.php">แผนผังหอพัก</a>
                     <a href="room_sample.php">ตัวอย่างห้องพัก</a>
-                    <a href="room_book.php">จองห้องพัก</a>
+                    <a href="dorm_plan.php">แผนผังหอพัก</a>
+                    <a href="dorm_fee.php">ค่าธรรมเนียม</a>
                 </div>
                 <div class="line"></div>
             </div>
