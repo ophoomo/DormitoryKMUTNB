@@ -1,0 +1,134 @@
+.disableBtnSend {
+    color: $colorWhiteHover !important;
+    background-color: $colorOrange - 60 !important;
+    cursor: not-allowed !important;
+}
+
+.checkPass {
+    cursor: text !important;
+}
+
+.container_forgot {
+    p {
+        user-select: none;
+    }
+    font-family: 'Prompt',
+    sans-serif;
+    margin: 0 auto;
+    margin-top: 140px;
+    max-width: 1200px;
+    min-height: 80vh;
+    background-color: $colorContent;
+    border-radius: 50px;
+    .title {
+        padding-top: 60px;
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .areaCheckMail {
+        padding-top: 60px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        button {
+            margin-top: 12px;
+            cursor: pointer;
+            width: 200px;
+            height: 32px;
+            color: white;
+            border: 0px;
+            background-color: $colorOrange;
+            border-radius: 5px;
+            transition: 0.2s;
+            &:hover {
+                background-color: $colorOrange - 20;
+            }
+        }
+        .statusSend {
+            margin-top: 8px;
+            font-size: 14px;
+            color: $colorOrange - 40;
+        }
+    }
+    .areaInputCheck {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            font-family: 'Kanit', sans-serif;
+            padding: 2px 8px;
+            width: 160px;
+        }
+        input[type="submit"] {
+            text-align: center;
+            margin-top: 4px;
+            cursor: pointer;
+            width: 180px;
+            height: 32px;
+            color: white;
+            border: 0px;
+            background-color: $colorOrange;
+            border-radius: 5px;
+            transition: 0.2s;
+            &:hover {
+                background-color: $colorOrange - 30;
+            }
+        }
+    }
+    .areaInputNewPassword {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 60px;
+        .descript {
+            font-size: 14px;
+            color: $colorOrange + 40;
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
+        .item {
+            margin-top: 10px;
+            p {
+                margin-bottom: 4px;
+            }
+        }
+        margin-top: 20px;
+        input[type="password"] {
+            cursor: no-drop;
+            font-family: 'Kanit', sans-serif;
+            padding: 4px 8px;
+            width: 160px;
+        }
+        input[type="submit"] {
+            margin-top: 6px;
+            cursor: pointer;
+            width: 180px;
+            height: 32px;
+            color: white;
+            border: 0px;
+            background-color: $colorOrange;
+            border-radius: 5px;
+            transition: 0.2s;
+            &:hover {
+                background-color: $colorOrange - 30;
+            }
+        }
+        .item {
+            .userNameShow {
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+}

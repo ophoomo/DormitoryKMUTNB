@@ -20,7 +20,7 @@
                 <a href="room_book.php">จองห้องพัก</a>
             </div>
             <div class="item adminLogin deactive">
-                <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
+                <a href="./admin/admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
             </div>
             <div id="popupLogin" class="item destroyUserLogin">
                 <a href="login.php">เข้าสู่ระบบ/สมัครสมาชิก</a>

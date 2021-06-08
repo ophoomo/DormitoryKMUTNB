@@ -19,61 +19,44 @@
     <?php include "navbar.php"; ?>
 
     <div class="container_forgot">
-        <p class="title">ข้อมูลส่วนตัว</p>
-        <form action="">
-            <div class="areaForgot">
-                <div class="data">
-                    <p>ชื่อ</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>นามสกุล</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>นามสกุล</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>เลขบัตรประจำตัวประชาชน</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>รหัสนักศึกษา</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>เบอร์โทรศัพท์</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>อีเมลล์</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>หมู่เลือด</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>ศาสนา</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>คณะ</p>
-                    <input class="input" type="text" disabled>
-                </div>
-                <div class="data">
-                    <p>สาขา</p>
-                    <input class="input" type="text" disabled>
-                </div>
+        <p class="title">รีเช็ตรหัสผ่าน</p>
+        
+        <div class="areaCheckMail">
+            <p>กรอกรหัสที่ได้รัยจากอีเมลล์ : <?php echo 'email@email.com'; ?></p>
+            <button class="btnSendMail" onclick="sendMail()">
+                ส่งรหัสยืนยันตัวตนไปยัง email
+            </button>
+            <span class="statusSend deactive">ส่งได้อีกครั้งใน&nbsp;<span class="timeSendMail"></span>&nbsp;วิ</span>
+        </div>
+        
+        <div class="areaInputCheck">
+            <p>นำรหัสที่ได้จากอีเมลล์ใส่ในช่องนี้</p>
+            <div class="data">
+                <input class="input" type="text">
             </div>
-            <div class="btn btnSaveData deactive">
-                <input type="submit" value="บันทึกข้อมูล">
+            <input type="submit" value="ตรวจสอบรหัส" placeholder="ใส่รหัสที่ได้จากอีเมลล์" onclick="checkStatus(1)">
+        </div>
+
+        <form action="">
+            <div class="areaInputNewPassword">
+                <div class="descript">
+                    <p class="textStatus">โปรดทำการยืนยันตัวตนจากรหัสที่ถูกส่งไปยังอีเมลล์ก่อน</p>
+                </div>
+                <div class="item">
+                    <p class="userNameShow deactive">your username : <span><?php echo "samaham44"; ?></span></p>
+                </div>
+                <div class="item">
+                    <p>กรอกรหัสผ่านใหม่</p>
+                    <input class="inputPass" type="password" placeholder="new password" disabled>
+                </div>   
+                <div class="item">
+                    <p>กรอกรหัสผ่านใหม่อีกครั้ง</p>
+                    <input class="inputPass" type="password" placeholder="new password again" disabled>
+                </div>
+                <input type="submit" value="เปลี่ยนรหัสผ่าน"  onclick="editData()">
             </div>
         </form>
-            <div class="btn btnEditData">
-                <input type="submit" value="แก้ไขข้อมูล"  onclick="editData()">
-            </div>
+    
     </div>
         
     <!-- Footer -->

@@ -1754,7 +1754,7 @@ body {
 .container_fee {
   margin-top: 140px; }
   .container_fee .icon {
-    color: #79274d;
+    color: #683709;
     display: flex;
     justify-content: center;
     align-self: center; }
@@ -1780,7 +1780,7 @@ body {
       .container_fee .areaFee .room_fee .women,
       .container_fee .areaFee .room_fee .women2 {
         font-size: 16px;
-        background: #116f80;
+        background: #975100;
         color: #f0f0f0; }
       .container_fee .areaFee .room_fee .txt {
         background-color: #f0f0f0; }
@@ -1789,7 +1789,7 @@ body {
         display: flex;
         justify-content: center;
         font-size: 18px;
-        background: #005b6c; }
+        background: #833d00; }
         .container_fee .areaFee .room_fee .title p {
           letter-spacing: 1px;
           color: white; }
@@ -1849,7 +1849,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsurance .title {
       grid-area: title;
-      background-color: #116f80;
+      background-color: #975100;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1865,7 +1865,7 @@ body {
       grid-area: icon; }
     .container_fee .areaInsuKey .title {
       grid-area: title;
-      background-color: #116f80;
+      background-color: #975100;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1881,7 +1881,7 @@ body {
       grid-area: icon; }
     .container_fee .areafeeToday .title {
       grid-area: title;
-      background-color: #116f80;
+      background-color: #975100;
       color: white;
       display: flex;
       justify-content: center; }
@@ -1918,7 +1918,7 @@ body {
           font-size: 14px !important; }
         .container_fee .areaFee .room_fee .title {
           font-size: 16px !important;
-          background: #005b6c !important; }
+          background: #833d00 !important; }
           .container_fee .areaFee .room_fee .title p {
             letter-spacing: 1px !important;
             color: white !important; }
@@ -2468,13 +2468,13 @@ body {
   .areaBook .titleBook {
     width: 100%; }
     .areaBook .titleBook p {
-      padding-top: 80px;
+      padding-top: 100px;
       font-weight: 300;
       text-align: center;
-      font-size: 42px; }
+      font-size: 48px; }
   .areaBook .areaSelect {
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 100px;
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -2485,30 +2485,37 @@ body {
     .areaBook .areaSelect .selectDorm,
     .areaBook .areaSelect .selectFloor,
     .areaBook .areaSelect .selectBranch {
+      margin: 0 8px;
       display: flex;
       flex-direction: row;
       align-items: center; }
       .areaBook .areaSelect .selectDorm p,
       .areaBook .areaSelect .selectFloor p,
       .areaBook .areaSelect .selectBranch p {
+        font-weight: 400;
+        font-size: 18px;
         color: #850000;
-        margin-right: 10px; }
+        margin-right: 12px; }
       .areaBook .areaSelect .selectDorm select,
       .areaBook .areaSelect .selectFloor select,
       .areaBook .areaSelect .selectBranch select {
+        font-weight: 400;
+        font-size: 16px;
         font-family: 'Kanit', sans-serif;
         padding: 5px 8px 5px 8px; }
     .areaBook .areaSelect .selectDorm {
+      margin-left: -40px;
       grid-area: selectTopLeft; }
     .areaBook .areaSelect .selectFloor {
       grid-area: selectTopRight; }
     .areaBook .areaSelect .selectBranch {
+      margin-left: -40px;
       margin-top: 12px;
       grid-area: selectBottom;
       align-items: center; }
       .areaBook .areaSelect .selectBranch p {
         text-align: right;
-        width: 120px; }
+        width: 200px; }
       .areaBook .areaSelect .selectBranch select {
         height: 34px; }
   .areaBook .areaCard {
@@ -2590,35 +2597,72 @@ body {
               background: #111; }
 
 @media only screen and (min-width: 280px) and (max-width: 420px) {
-  .areaSelect .selectDorm p,
-  .areaSelect .selectFloor p,
-  .areaSelect .selectBranch p {
-    text-align: right;
-    width: 120px; }
-  .areaSelect .selectDorm select,
-  .areaSelect .selectFloor select,
-  .areaSelect .selectBranch select {
-    width: 200px !important; } }
+  .areaSelect {
+    column-gap: 8px !important;
+    row-gap: 2px !important;
+    margin-top: 68px !important; }
+    .areaSelect .selectDorm,
+    .areaSelect .selectFloor,
+    .areaSelect .selectBranch {
+      margin: 8px 0 !important; }
+      .areaSelect .selectDorm p,
+      .areaSelect .selectFloor p,
+      .areaSelect .selectBranch p {
+        margin-left: -80px !important;
+        font-size: 16px !important;
+        text-align: right;
+        width: 120px; }
+      .areaSelect .selectDorm select,
+      .areaSelect .selectFloor select,
+      .areaSelect .selectBranch select {
+        font-size: 14px !important;
+        width: 200px !important; }
+  .areaCard {
+    margin-top: 80px !important; }
+    .areaCard .dorm {
+      width: 100%;
+      row-gap: 40px !important; } }
 
-.container_forgot {
+@media only screen and (min-width: 420px) and (max-width: 1100px) {
+  .areaBook .areaSelect .selectDorm,
+  .areaBook .areaSelect .selectFloor,
+  .areaBook .areaSelect .selectBranch {
+    margin: 10px 0 !important; }
+    .areaBook .areaSelect .selectDorm p,
+    .areaBook .areaSelect .selectFloor p,
+    .areaBook .areaSelect .selectBranch p {
+      text-align: right;
+      width: 140px; }
+    .areaBook .areaSelect .selectDorm select,
+    .areaBook .areaSelect .selectFloor select,
+    .areaBook .areaSelect .selectBranch select {
+      width: 400px !important; }
+  .areaCard {
+    margin-top: 80px !important; }
+    .areaCard .dorm {
+      width: 100%;
+      row-gap: 60px !important;
+      column-gap: 40px !important; } }
+
+.container_profile {
   font-family: 'Prompt', sans-serif;
   margin: 0 auto;
   margin-top: 160px;
   max-width: 1200px;
   min-height: 80vh; }
-  .container_forgot .title {
+  .container_profile .title {
     font-size: 42px;
     font-weight: 300;
     text-align: center; }
-  .container_forgot .areaDescript .descript {
+  .container_profile .areaDescript .descript {
     position: relative;
     top: 32px;
     text-align: center;
     width: 80%;
     font-size: 13px;
-    color: red;
+    color: #d70000;
     margin: 0 auto; }
-  .container_forgot .areaForgot {
+  .container_profile .areaProfile {
     margin: 0 auto;
     margin-top: 40px;
     max-width: 80%;
@@ -2631,20 +2675,20 @@ body {
     justify-content: center;
     row-gap: 20px;
     column-gap: 28px; }
-    .container_forgot .areaForgot .data p {
+    .container_profile .areaProfile .data p {
       margin-left: 10px;
       margin-bottom: 8px; }
-    .container_forgot .areaForgot .data input {
+    .container_profile .areaProfile .data input {
       cursor: not-allowed;
       font-family: 'Kanit', sans-serif;
       padding: 4px 16px; }
-  .container_forgot .btn {
+  .container_profile .btn {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     margin-top: 40px;
     max-width: 100%; }
-    .container_forgot .btn input {
+    .container_profile .btn input {
       cursor: pointer;
       padding: 8px 24px;
       border: 0px;
@@ -2652,31 +2696,203 @@ body {
       color: white;
       font-size: 16px;
       transition: 0.2s; }
-  .container_forgot .btnEditData input {
-    background-color: #ff6514; }
-    .container_forgot .btnEditData input:hover {
-      background-color: #eb3d00; }
-  .container_forgot .btnSaveData input {
+  .container_profile .btnEditData input {
+    background-color: #c95c1d; }
+    .container_profile .btnEditData input:hover {
+      background-color: #9b4513; }
+  .container_profile .btnSaveData input {
     background-color: #309900; }
-    .container_forgot .btnSaveData input:hover {
+    .container_profile .btnSaveData input:hover {
       background-color: #206600; }
-  .container_forgot select {
+  .container_profile select {
     font-family: "Kanit", sans-serif;
     padding: 4px 10px; }
-  .container_forgot .data .branch select {
+  .container_profile .data .branch select {
     width: 280px !important; }
-  .container_forgot .areaLogout {
+  .container_profile .areaLogout {
     position: relative;
     top: 44px;
     width: 90%;
-    text-align: right !important; }
-    .container_forgot .areaLogout .btnLogout {
+    text-align: right !important;
+    font-size: 17px; }
+    .container_profile .areaLogout .btnLogout {
       right: 0;
-      color: red; }
+      color: #d70000; }
+  .container_profile .areaDescript2 .descript2 {
+    position: relative;
+    top: 8px;
+    text-align: right;
+    width: 80%;
+    font-size: 12px;
+    color: #eb0000;
+    margin: 0 auto; }
 
 @media only screen and (min-width: 280px) and (max-width: 1100px) {
   .areaLogout {
     display: none !important; } }
+
+.disableBtnSend {
+  color: #c8c8c8 !important;
+  background-color: #710000 !important;
+  cursor: not-allowed !important; }
+
+.checkPass {
+  cursor: text !important; }
+
+.container_forgot {
+  font-family: 'Prompt', sans-serif;
+  margin: 0 auto;
+  margin-top: 140px;
+  max-width: 1200px;
+  min-height: 80vh;
+  background-color: #f0efef;
+  border-radius: 50px; }
+  .container_forgot p {
+    user-select: none; }
+  .container_forgot .title {
+    padding-top: 60px;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center; }
+  .container_forgot .areaCheckMail {
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+    .container_forgot .areaCheckMail button {
+      margin-top: 12px;
+      cursor: pointer;
+      width: 200px;
+      height: 32px;
+      color: white;
+      border: 0px;
+      background-color: #ad2300;
+      border-radius: 5px;
+      transition: 0.2s; }
+      .container_forgot .areaCheckMail button:hover {
+        background-color: #990f00; }
+    .container_forgot .areaCheckMail .statusSend {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #850000; }
+  .container_forgot .areaInputCheck {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .container_forgot .areaInputCheck p {
+      margin: 10px 0; }
+    .container_forgot .areaInputCheck input[type="text"] {
+      font-family: 'Kanit', sans-serif;
+      padding: 2px 8px;
+      width: 160px; }
+    .container_forgot .areaInputCheck input[type="submit"] {
+      text-align: center;
+      margin-top: 4px;
+      cursor: pointer;
+      width: 180px;
+      height: 32px;
+      color: white;
+      border: 0px;
+      background-color: #ad2300;
+      border-radius: 5px;
+      transition: 0.2s; }
+      .container_forgot .areaInputCheck input[type="submit"]:hover {
+        background-color: #8f0500; }
+  .container_forgot .areaInputNewPassword {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    margin-top: 20px; }
+    .container_forgot .areaInputNewPassword .descript {
+      font-size: 14px;
+      color: #d54b28;
+      padding-top: 40px;
+      margin-bottom: 20px; }
+    .container_forgot .areaInputNewPassword .item {
+      margin-top: 10px; }
+      .container_forgot .areaInputNewPassword .item p {
+        margin-bottom: 4px; }
+    .container_forgot .areaInputNewPassword input[type="password"] {
+      cursor: no-drop;
+      font-family: 'Kanit', sans-serif;
+      padding: 4px 8px;
+      width: 160px; }
+    .container_forgot .areaInputNewPassword input[type="submit"] {
+      margin-top: 6px;
+      cursor: pointer;
+      width: 180px;
+      height: 32px;
+      color: white;
+      border: 0px;
+      background-color: #ad2300;
+      border-radius: 5px;
+      transition: 0.2s; }
+      .container_forgot .areaInputNewPassword input[type="submit"]:hover {
+        background-color: #8f0500; }
+    .container_forgot .areaInputNewPassword .item .userNameShow {
+      font-size: 14px;
+      margin-bottom: 14px; }
+
+.areaReportBookroom {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 80vh;
+  margin-top: 120px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .areaReportBookroom .card {
+    text-align: center;
+    border-radius: 20px;
+    padding: 60px 120px;
+    background-color: #f0f0f0; }
+    .areaReportBookroom .card .title p {
+      color: #006c00;
+      font-size: 28px;
+      text-align: center; }
+    .areaReportBookroom .card .numberRoom {
+      margin-top: 44px; }
+      .areaReportBookroom .card .numberRoom p {
+        margin: 0; }
+    .areaReportBookroom .card .listPerson {
+      margin-top: 40px;
+      margin-left: 14px;
+      text-align: left; }
+      .areaReportBookroom .card .listPerson p {
+        color: #990f00;
+        margin-bottom: 24px; }
+      .areaReportBookroom .card .listPerson li {
+        margin: 12px 0; }
+    .areaReportBookroom .card .btnPrint {
+      margin-top: 60px; }
+      .areaReportBookroom .card .btnPrint input {
+        cursor: pointer;
+        border: 0px;
+        background-color: #ad2300;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+        transition: 0.2s; }
+        .areaReportBookroom .card .btnPrint input:hover {
+          background-color: #850000; }
+  .areaReportBookroom .descript {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #990f00; }
+
+@media only screen and (min-width: 280px) and (max-width: 780px) {
+  .card {
+    padding: 40px 20px !important; } }
 
 @media only screen and (max-width: 280px) {
   * {

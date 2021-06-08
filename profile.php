@@ -18,13 +18,13 @@
     <!-- Menu  -->
     <?php include "navbar.php"; ?>
 
-    <div class="container_forgot">
+    <div class="container_profile">
         <p class="title userSelectNone">ข้อมูลส่วนตัว</p>
         <div class="areaDescript">
             <p class="descript userSelectNone">แก้ไขข้อมูลอื่นใดนอกเหนือนี้ กรุณาแจ้งมายังเพจเฟสบุ๊คของหอพักด้วยการทักแชทมา หรือช่องทางอื่น ๆ ที่อยู่หน้าหลักค่ะ</p>
         </div>
         <form action="">
-            <div class="areaForgot">
+            <div class="areaProfile">
                 <div class="data">
                     <p class="userSelectNone">ชื่อ</p>
                     <input class="input" type="text" disabled>
@@ -123,9 +123,13 @@
                 <input type="submit" value="บันทึกข้อมูล">
             </div>
         </form>
+            <div class="areaDescript2">
+                <p class="descript2 userSelectNone">ต้องการเปลี่ยนรหัสผ่าน ให้เข้าไปที่หน้าล็อคอินแล้วกด ลืมรหัสผ่าน ค่ะ</p>
+            </div>
             <div class="btn btnEditData">
                 <input type="submit" value="แก้ไขข้อมูล"  onclick="editData()">
             </div>
+            
             <div class="areaLogout">
             <a href="logout.php" class="btnLogout">ออกจากระบบ</a>
         </div>

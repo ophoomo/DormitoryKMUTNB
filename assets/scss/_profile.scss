@@ -1,4 +1,4 @@
-.container_forgot {
+.container_profile {
     font-family: 'Prompt', sans-serif;
     margin: 0 auto;
     margin-top: 160px;
@@ -16,11 +16,11 @@
             text-align: center;
             width: 80%;
             font-size: 13px;
-            color: red;
+            color: red - 40;
             margin: 0 auto;
         }
     }
-    .areaForgot {
+    .areaProfile {
         margin: 0 auto;
         margin-top: 40px;
         max-width: 80%;
@@ -63,9 +63,9 @@
     }
     .btnEditData {
         input {
-            background-color: $colorOrangeWhite + 20;
+            background-color: rgb(201, 92, 29);
             &:hover {
-                background-color: $colorOrangeWhite - 20;
+                background-color: rgb(155, 69, 19);
             }
         }
     }
@@ -93,9 +93,21 @@
         top: 44px;
         width: 90%;
         text-align: right !important;
+        font-size: 17px;
         .btnLogout {
             right: 0;
-            color: red;
+            color: red - 40;
+        }
+    }
+    .areaDescript2 {
+        .descript2 {
+            position: relative;
+            top: 8px;
+            text-align: right;
+            width: 80%;
+            font-size: 12px;
+            color: red - 20;
+            margin: 0 auto;
         }
     }
 }
