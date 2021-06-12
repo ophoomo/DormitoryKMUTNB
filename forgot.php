@@ -22,7 +22,7 @@
         <p class="title">รีเช็ตรหัสผ่าน</p>
         
         <div class="areaCheckMail">
-            <p>กรอกรหัสที่ได้รัยจากอีเมลล์ : <?php echo 'email@email.com'; ?></p>
+            <p>กรอกรหัสที่ได้รับจากอีเมลล์ : <?php echo 'email@email.com'; ?></p>
             <button class="btnSendMail" onclick="sendMail()">
                 ส่งรหัสยืนยันตัวตนไปยัง email
             </button>

@@ -80,8 +80,8 @@
                         </div>
 
                         <div class="question">
-                            <p>ชื่อ</p>
-                            <input name="firstname" type="text" placeholder="ชื่อ">
+                            <p>ชื่อจริง</p>
+                            <input name="firstname" type="text" placeholder="ชื่อนักศึกษา">
                         </div>
 
                         <div class="question">
@@ -91,19 +91,14 @@
 
                         <div class="question">
                             <p>เลขบัตรประจำตัวประชาชน</p>
-                            <input name="idCard" type="text" placeholder="เลขบัตรประจำตัวประชาชน">
-                        </div>
-                        
-                        <div class="question">
-                            <p>รหัสนักศึกษา</p>
-                            <input name="idStd" type="text" placeholder="เลขบัตรประจำตัวประชาชน">
+                            <input name="idCard" type="text" maxlength="13" placeholder="เลขบัตรประจำตัวประชาชน">
                         </div>
 
                         <div class="question">
                             <p>ชื่อเล่น</p>
                             <input name="nickname" type="text" placeholder="ชื่อเล่น">
                         </div>
-
+                        
                         <div class="question">
                             <p>หมู่เลือด</p>
                             <select name="blood_type" id="blood_type">
@@ -128,7 +123,12 @@
 
                         <div class="question">
                             <p>วัดเกิด</p>
-                            <input name="birthday" type="date" placeholder="วัดเกิด">
+                            <input required name="birthday" type="date" placeholder="วัดเกิด" style="height: 19px;">
+                        </div>
+
+                        <div class="question">
+                            <p>รหัสนักศึกษา</p>
+                            <input name="idStd" type="text" maxlength="13" placeholder="เลขบัตรประจำตัวประชาชน">
                         </div>
 
                         <div class="question">
@@ -199,7 +199,6 @@
                         </div>
                     </div>
                 </div>
-    
                 
                 <!-- ข้อมูลติดต่อ -->
                 <div class="session userSelectNone">
@@ -212,7 +211,7 @@
                         
                         <div class="question">
                             <p>เบอร์โทรศัพท์</p>
-                            <input name="phone" type="text" placeholder="เบอร์โทรศัพท์">
+                            <input name="tel" type="text" placeholder="เบอร์โทรศัพท์">
                         </div>
                         
                         <div class="question">
@@ -222,37 +221,37 @@
                         
                         <div class="question">
                             <p>บ้านเลขที่</p>
-                            <input name="email" type="text" placeholder="บ้านเลขที่">
+                            <input name="home_number" type="text" placeholder="บ้านเลขที่">
                         </div>
                         
                         <div class="question">
                             <p>ชื่อหมู่บ้าน (ถ้ามี)</p>
-                            <input name="email" type="text" placeholder="ชื่อหมู่บ้าน">
+                            <input name="village_name" type="text" placeholder="ชื่อหมู่บ้าน">
                         </div>
                         
                         <div class="question">
                             <p>หมู่ที่</p>
-                            <input name="email" type="text" placeholder="หมู่ที่">
+                            <input name="swine" type="text" placeholder="หมู่ที่">
                         </div>
                         
                         <div class="question">
                             <p>ซอย</p>
-                            <input name="email" type="text" placeholder="ซอย">
+                            <input name="alley" type="text" placeholder="ซอย">
                         </div>
                         
                         <div class="question">
                             <p>ถนน</p>
-                            <input name="email" type="text" placeholder="ถนน">
+                            <input name="road" type="text" placeholder="ถนน">
                         </div>
                         
                         <div class="question">
                             <p>ตำบล / แขวง</p>
-                            <input name="nickname" type="text" placeholder="ตำบล / แขวง">
+                            <input name="locality" type="text" placeholder="ตำบล / แขวง">
                         </div>
 
                         <div class="question">
                             <p>อำเภอ / เขต</p>
-                            <input name="idCard" type="text" placeholder="อำเภอ / เขต">
+                            <input name="district" type="text" placeholder="อำเภอ / เขต">
                         </div>
                         
                         <div class="question">
@@ -263,6 +262,89 @@
                             <p>รหัสไปรษณี</p>
                             <input name="zipCode" type="text" placeholder="รหัสไปรษณี">
                         </div>
+                    </div>
+                </div>
+
+
+                <!-- ประวัติการศึกษา -->
+                <div class="session userSelectNone">
+                    
+                    <div class="titleSection userSelectNone">
+                        <p>ประวัติการศึกษา (ล่าสุด)</p>
+                    </div>
+                    
+                    <div class="areaInput">
+                        
+                        <div class="question">
+                            <p>จบการศึกษาจาก</p>
+                            <input name="stdEduAcademy" type="text" placeholder="โรงเรียน, วิทยาลัย, อื่น ๆ">
+                        </div>
+                        
+                        <div class="question">
+                            <p>ระดับชั้น</p>
+                            <select name="stdEduDegree" id="education">
+                                <option value="" disabled selected>- กรุณาเลือกระดับชั้น -</option>
+                                <option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
+                                <option value="มัธยมศึกษาตอนปลาย">มัธยมศึกษาตอนปลาย</option>    
+                                <option value="ปวช.">ปวช.</option>
+                                <option value="ปวส.">ปวส.</option>
+                                <option value="">อื่น ๆ ระบุในเอกสาร</option>
+                            </select>
+                        </div>
+                        
+                        <div class="question">
+                            <p>ปีการศึกษาที่จบ</p>
+                            <input name="stdEduComple" type="text" placeholder="ปี พ.ศ. 4 หลัก">
+                        </div>
+
+                        <!-- <div class="question">
+                            <p>อาจารย์ที่ปรึกษา</p>
+                            <input name="stdEduTeacher" type="text" placeholder="อาจารย์ที่ปรึกษา">
+                        </div>
+
+                        <div class="question">
+                            <p>เบอร์โทรติดต่ออาจารย์ที่ปรึกษา</p>
+                            <input name="stdTellTeacher" type="text" placeholder="อาจารย์ที่ปรึกษา">
+                        </div> -->
+
+                    </div>
+                </div>
+
+
+                <!-- ได้รับอุปการะด้านการเงินจาก -->
+                <div class="session userSelectNone">
+                    
+                    <div class="titleSection userSelectNone">
+                        <p>นักศึกษาได้รับอุปการะด้านการเงินจากใคร</p>
+                    </div>
+
+                    <div class="areaInput">
+    
+                        <di v class="question">
+                            <p>ผู้อุปการะเงิน</p>
+                            <select name="sponsor" id="blood_type">
+                                <option value="พ่อ/แม่">พ่อ/แม่</option>
+                                <option value="ปู่/ย่า">ปู่/ย่า</option>
+                                <option value="ตา/ยาย">ตา/ยาย</option>
+                                <option value="ลุง/ป้า">ลุง/ป้า</option>
+                                <option value="พ่อ">พ่อ</option>
+                                <option value="แม่">แม่</option>
+                                <option value="ปู่">ปู่</option>
+                                <option value="ย่า">ย่า</option>
+                                <option value="ตา">ตา</option>
+                                <option value="ยาย">ยาย</option>
+                                <option value="ลุง">ลุง</option>
+                                <option value="ป้า">ป้า</option>
+                                <option value="พี่">พี่</option>
+                                <option value="">อื่น ๆ ระบุในเอกสาร</option>
+                            </select>
+                        </di>
+
+                        <div class="question">
+                            <p>ได้รับเดือนละกี่บาท</p>
+                            <input style="text-align: center; width: 110px;" name="howmuch" type="text" placeholder="ระบุเฉพาะตัวเลข">
+                        </div>
+
                     </div>
                 </div>
 
@@ -285,8 +367,8 @@
                         </div>
                         
                         <div class="question">
-                            <p>ชื่อ</p>
-                            <input name="firstnameParents1" type="text" placeholder="ชื่อ">
+                            <p>ชื่อจริง</p>
+                            <input name="firstnameParents1" type="text" placeholder="ชื่อบิดา">
                         </div>
                         
                         <div class="question">
@@ -297,6 +379,16 @@
                         <div class="question">
                             <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
                             <input name="telParents1" type="text" placeholder="เบอร์โทรศัพท์">
+                        </div>
+
+                        <div class="question">
+                            <p>อาชีพ</p>
+                            <input name="careerParents1" type="text" placeholder="โปรดระบุ เช่น พนักงานบริษัท">
+                        </div>
+
+                        <div class="question">
+                            <p>สถานที่ทำงาน</p>
+                            <input name="workAtParents1" type="text" placeholder="ชื่อสถานที่ ตามด้วยจังหวัด">
                         </div>
                         
                         <div class="question">
@@ -327,8 +419,8 @@
                         </div>
                     
                         <div class="question">
-                            <p>ชื่อ</p>
-                            <input name="firstnameParents2" type="text" placeholder="ชื่อ">
+                            <p>ชื่อจริง</p>
+                            <input name="firstnameParents2" type="text" placeholder="ชื่อมารดา">
                         </div>
                     
                         <div class="question">
@@ -340,6 +432,16 @@
                             <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
                             <input name="telParents2" type="text" placeholder="เบอร์โทรศัพท์">
                         </div>
+
+                        <div class="question">
+                            <p>อาชีพ</p>
+                            <input name="careerParents2" type="text" placeholder="โปรดระบุ เช่น พนักงานบริษัท">
+                        </div>
+
+                        <div class="question">
+                            <p>สถานที่ทำงาน</p>
+                            <input name="workAtParents2" type="text" placeholder="ชื่อสถานที่ ตามด้วยจังหวัด">
+                        </div>
                         
                         <div class="question">
                             <p>สถานะ</p>
@@ -350,7 +452,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <!-- ข้อมูลผู้ติดต่อฉุกเฉิน 1 -->
                 <div class="session userSelectNone">
@@ -372,8 +473,8 @@
                         </div>
                         
                         <div class="question">
-                            <p>ชื่อ</p>
-                            <input name="firstnameEmergency1" type="text" placeholder="ชื่อ">
+                            <p>ชื่อจริง</p>
+                            <input name="firstnameEmergency1" type="text" placeholder="ชื่อผู้ติดต่อฉุกเฉิน">
                         </div>
                         
                         <div class="question">
@@ -388,7 +489,7 @@
                         
                         <div class="question">
                             <p>ผู้ติดต่อฉุกเฉินคนนี้เป็นใคร</p>
-                            <input name="relationshipEmergency1" type="text" placeholder="โปรดระบุ เช่น พ่อ, แม่, พี่, ลุง">
+                            <input name="relationshipEmergency1" type="text" placeholder="โปรดระบุ เช่น พ่อ, แม่, พี่, ลุง, พี่">
                         </div>
                     </div>
                 </div>
@@ -414,8 +515,8 @@
                         </div>
                         
                         <div class="question">
-                            <p>ชื่อ</p>
-                            <input name="firstnameEmergency2" type="text" placeholder="ชื่อ">
+                            <p>ชื่อจริง</p>
+                            <input name="firstnameEmergency2" type="text" placeholder="ชื่อผู้ติดต่อฉุกเฉิน">
                         </div>
                         
                         <div class="question">

@@ -119,13 +119,13 @@
                     </div>
                 </div>
             </div>
+            <div class="areaDescript2">
+                <p class="descript2 userSelectNone">ต้องการเปลี่ยนรหัสผ่าน ให้เข้าไปที่หน้าล็อคอินแล้วกด ลืมรหัสผ่าน ค่ะ</p>
+            </div>
             <div class="btn btnSaveData deactive">
                 <input type="submit" value="บันทึกข้อมูล">
             </div>
         </form>
-            <div class="areaDescript2">
-                <p class="descript2 userSelectNone">ต้องการเปลี่ยนรหัสผ่าน ให้เข้าไปที่หน้าล็อคอินแล้วกด ลืมรหัสผ่าน ค่ะ</p>
-            </div>
             <div class="btn btnEditData">
                 <input type="submit" value="แก้ไขข้อมูล"  onclick="editData()">
             </div>

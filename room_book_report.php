@@ -34,17 +34,18 @@
                     <li>นายชิษเทสเทส ไชยหงษ์</li>
                 </div>
                 <div class="btnPrint">
-                    <input type="submit" value="ปริ้นใบยืนยันการเข้าอยู่หอพัก" onclick="location.href = './print_reportBook.php';">   
+                    <input type="submit" value="ปริ้นใบยืนยันการเข้าอยู่หอพัก" onclick="window.open('./room_book_reportPrint.php', '_blank')">   
+                    <!-- <input type="submit" value="ปริ้นใบยืนยันการเข้าอยู่หอพัก" onclick="location.href='./print_reportBook.php';">    -->
                 </div>
             </div>
             <div class="descript">
-                <p>ปริ้นเอกสารเพื่อยื่นยืนยันการเข้าอยู่หอพักที่ธุรการหอพัก</p>
+                <span>ปริ้นเอกสารเพื่อยื่นยืนยันการเข้าอยู่หอพัก</span>&nbsp;<span>และทำการยื่นเอกสารที่ธุรการหอพัก</span>
             </div>
         </div>
     </div>
     <!-- Footer -->
     <?php include "footer.php"; ?>
     
-    <!-- <script src="./assets/js/_room_book_report.js"></script>     -->
+    <script src="./assets/js/_room_book_report.js"></script>    
 </body>    
 </html>

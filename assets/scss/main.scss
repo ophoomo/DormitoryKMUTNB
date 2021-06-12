@@ -75,6 +75,7 @@ body {
 @import "_profile";
 @import "_forgot";
 @import "_roomBookReport";
+@import "_roomBookReportPrint";
 // verySmall size don't support
 @media only screen and (max-width: 280px) {
     * {

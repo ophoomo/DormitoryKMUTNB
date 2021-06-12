@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarabun&display=swap");
 .active {
   display: block !important; }
 
@@ -986,7 +987,7 @@ body {
       grid-template-columns: 1fr 1fr;
       padding: 24px 0;
       margin-top: 14px;
-      background-color: #fafafa;
+      background-color: #f4f4f4;
       border-top: 2.8px solid #ff5100;
       justify-items: center; }
       .containerMain .container_contact .areaContact .map {
@@ -1016,7 +1017,7 @@ body {
           padding: 14px 0px 10px 0px;
           margin: 10px 0;
           box-shadow: 1px 1px 6px 0 rgba(34, 34, 34, 0.4);
-          background-color: #fafafa; }
+          background-color: #f8f8f8; }
           .containerMain .container_contact .areaContact .contacts .fb p,
           .containerMain .container_contact .areaContact .contacts .phone p,
           .containerMain .container_contact .areaContact .contacts .location p {
@@ -2841,18 +2842,6 @@ body {
       font-size: 14px;
       margin-bottom: 14px; }
 
-#areaPrint {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%; }
-  #areaPrint .A4 {
-    width: 21cm;
-    height: 29.7cm; }
-  #areaPrint #page1 {
-    background-color: #222; }
-  #areaPrint #page2 {
-    background-color: #444; }
-
 .areaReportBookroom {
   margin: 0 auto;
   max-width: 1200px;
@@ -2898,13 +2887,59 @@ body {
         .areaReportBookroom .card .btnPrint input:hover {
           background-color: #850000; }
   .areaReportBookroom .descript {
+    display: flex !important;
+    flex-direction: rowc !important;
     margin-top: 12px;
     font-size: 14px;
     color: #990f00; }
 
 @media only screen and (min-width: 280px) and (max-width: 780px) {
   .card {
-    padding: 40px 20px !important; } }
+    padding: 40px 20px !important; }
+  .descript {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    width: 240px !important; }
+    .descript span {
+      font-size: 12px;
+      line-height: 0.4; } }
+
+@page {
+  size: A4;
+  size: 21cm 29.7cm;
+  margin: 0; }
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 16px; }
+
+#areaPrint {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto; }
+  #areaPrint .A4 {
+    width: 995px;
+    height: 842px; }
+  #areaPrint #page1 {
+    background-color: #f0f0f0; }
+  #areaPrint #page2 {
+    background-color: gainsboro; }
+  #areaPrint .title {
+    margin-top: 40px; }
+
+.areaData {
+  margin-top: 40px; }
+
+.line {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0; }
+  .line .text {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 40px; }
 
 @media only screen and (max-width: 280px) {
   * {

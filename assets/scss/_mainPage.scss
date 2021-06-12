@@ -177,7 +177,7 @@ body {
             grid-template-columns: 1fr 1fr;
             padding: 24px 0;
             margin-top: 14px;
-            background-color: $colorWhite + 10;
+            background-color: $colorWhite + 4;
             border-top: 2.8px solid #ff5100;
             justify-items: center;
             .map {
@@ -209,7 +209,7 @@ body {
                     padding: 14px 0px 10px 0px;
                     margin: 10px 0;
                     box-shadow: 1px 1px 6px 0 rgba(34, 34, 34, 0.4);
-                    background-color: $colorWhite + 10;
+                    background-color: $colorWhite + 8;
                     p {
                         font-size: 14px;
                         margin-left: 56px;
