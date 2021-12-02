@@ -1,6 +1,6 @@
 <?php 
     session_start(); 
-    require_once ('./../disable_error_report.php');
+    // require_once ('./../disable_error_report.php');
     require_once ('./../classes/Admin.php');
     require_once ('./../classes/Encode.php');
     $adminClass = new Admin();
@@ -57,11 +57,11 @@
                                 <thead>
                                     <tr>
                                         <th class="hidden"></th>
-                                        <th class="w-60 text-left"><span class="font-normal" style="font-size: 16px;">Username</span></th>
-                                        <th class="w-40 text-left"><span class="font-normal" style="font-size: 16px;">Firstname</span></th>
-                                        <th class="w-40 text-left"><span class="font-normal" style="font-size: 16px;">Lastname</span></th>
-                                        <th class="w-20 text-center"><span class="font-normal" style="font-size: 16px;">Status</span></th>
-                                        <th class="w-40 text-center"><span class="font-normal" style="font-size: 16px;">TOOLS</span></th>
+                                        <th class="text-left"><span class="font-normal" style="font-size: 16px;">Username</span></th>
+                                        <th class="text-left"><span class="font-normal" style="font-size: 16px;">Fullname</span></th>
+                                        <th class="text-left"><span class="font-normal" style="font-size: 16px;">Description</span></th>
+                                        <th class="text-center"><span class="font-normal" style="font-size: 16px;">Status</span></th>
+                                        <th class="text-center"><span class="font-normal" style="font-size: 16px;">TOOLS</span></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -77,19 +77,15 @@
                                 <tr class="text-sm valueAdmin">
                                     <input type="text" class="hidden" name="txt_adm_id" value="<?php echo $valueAdmin['adm_id'] ?>">
                                     <td class="username text-left"><?php echo $valueAdmin['adm_username'] ?></td>
-                                    <td class="firstname text-left"><?php echo $valueAdmin['adm_firstname'] ?></td>
-                                    <td class="lastname text-left"><?php echo $valueAdmin['adm_lastname'] ?></td>
+                                    <td class="fullname text-left"><?php echo $valueAdmin['adm_fullname'] ?></td>
+                                    <td class="description text-left"><?php echo ($valueAdmin['adm_description'] == null ? '-' : $valueAdmin['adm_description']) ?></td>
                                     <td class="status text-center"><?php echo ($valueAdmin['adm_status'] == 0 ? 'ผู้ดูแลระบบ' : ($valueAdmin['adm_status'] == 1 ? 'ผู้พัฒนาระบบ' : 'ผู้จัดสรรห้องพัก')) ?></td>
-                                    <?php if ($valueAdmin['adm_status'] === '1' and $statusAdmin['adm_status'] === '0'): ?>
-                                        <td class="text-center">ไม่มีสิทธิแก้ไข</td>
-                                    <?php else: ?>
-                                        <td class="text-center flex flex-row gap-x-0.5 justify-center font_prompt">
-                                            <p class="adm_id hidden"><?php echo $valueAdmin['adm_id']; ?></p>
-                                            <div name="edit_adm" onclick="togglePopupEdit(<?php echo $i; ?>)" class="cursor-pointer pl-2 pr-2 p-1 bg-blue-600 text-black mr-0.5 hover:bg-blue-700 rounded-sm"><i class="fas fa-pencil-alt text-white"></i></div>
-                                            <div class="btn_delete_admin_check cursor-pointer pl-2 pr-2 p-1 bg-red-600 text-gray-50 hover:bg-red-700 rounded-sm"><i class="fas fa-trash-alt"></i></div>
-                                            <input name="btn_delete_admin" type="submit" class="hidden btn_delete_admin">
-                                        </td>
-                                    <?php endif; ?>
+                                    <td class="text-center flex flex-row gap-x-0.5 justify-center font_prompt">
+                                        <p class="adm_id hidden"><?php echo $valueAdmin['adm_id']; ?></p>
+                                        <div name="edit_adm" onclick="togglePopupEdit(<?php echo ($valueAdmin['adm_status'] == 1 ? -1 : $i); ?>)" class="cursor-pointer pl-2 pr-2 p-1 bg-blue-600 text-black mr-0.5 hover:bg-blue-700 rounded-sm"><i class="fas fa-pencil-alt text-white"></i></div>
+                                        <div onclick="<?php echo ($valueAdmin['adm_status'] == 1 ? "deactionPermision()" : '') ?>" class="<?php echo ($valueAdmin['adm_status'] == 1 ? '' : "btn_delete_admin_check") ?> cursor-pointer pl-2 pr-2 p-1 bg-red-600 text-gray-50 hover:bg-red-700 rounded-sm"><i class="fas fa-trash-alt"></i></div>
+                                        <input name="btn_delete_admin" type="submit" class="hidden btn_delete_admin">
+                                    </td>
                                 </tr>
                             </form>
                     <?php 
@@ -110,10 +106,10 @@
                             <form class="mt-4" action="#" name="form_insertDataAdmin" method="POST">
                                 <p class="mt-2">ชื่อผู้ใช้</p>
                                 <input name="txt_username" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อผู้ใช้" value>
-                                <p class="mt-2">ชื่อจริง</p>
-                                <input name="txt_firstname" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อจริง" value>
-                                <p class="mt-2">นามสกุล</p>
-                                <input name="txt_lastname" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="นามสกุล" value>
+                                <p class="mt-2">ชื่อเต็ม</p>
+                                <input name="txt_fullname" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อเต็ม" value>
+                                <p class="mt-2">คำอธิบาย</p>
+                                <input name="txt_description" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="คำอธิบาย" value>
                                 <p class="mt-2">รหัสผ่านใหม่</p>
                                 <input name="txt_password" minlength="8" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="password" placeholder="รหัสผ่านใหม่" value>
                                 <p class="mt-2">ยืนยันรหัสผ่านใหม่</p>
@@ -136,10 +132,10 @@
                                 <input class="hidden" type="text" name="txt_adm_id_edit" value="">
                                 <p class="mt-2">ชื่อผู้ใช้</p>
                                 <input name="txt_username_edit" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อผู้ใช้" value="">
-                                <p class="mt-2">ชื่อจริง</p>
-                                <input name="txt_firstname_edit" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อจริง" value="">
-                                <p class="mt-2">นามสกุล</p>
-                                <input name="txt_lastname_edit" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="นามสกุล" value="">
+                                <p class="mt-2">ชื่อเต็ม</p>
+                                <input name="txt_fullname_edit" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="ชื่อเต็ม" value="">
+                                <p class="mt-2">คำอธิบาย</p>
+                                <input name="txt_description_edit" class="border-2 border-black border-opacity-40 rounded-md w-full h-9 pl-4 pr-4 pt-0.5" type="text" placeholder="คำอธิบาย" value="">
                                 <p class="mt-2">*** ระดับการเข้าถึง ***</p>
                                 <?php
                                     $dataAdmin = $adminClass->Find('adm_status', 'adm_id', $_SESSION['adm_id']); 
@@ -198,14 +194,14 @@
     <?php 
     
         if (isset($_POST['btn_insertAdmin'])) {
-            if ($_POST['txt_firstname'] !== '' && $_POST['txt_lastname'] !== '' && $_POST['txt_username'] !== '' 
+            if ($_POST['txt_fullname'] !== '' && $_POST['txt_description'] !== '' && $_POST['txt_username'] !== '' 
                 && $_POST['txt_password'] !== '' && $_POST['txt_password_again'] !== '') 
             {
                 if ($_POST['txt_password'] === $_POST['txt_password_again']) {
                     $adm_salt = $encodeClass->RandomSalt();
                     $adm_password = $_POST['txt_password'];
                     $adm_password = $encodeClass->Encode($adm_password);
-                    if ($adminClass->Insert($_POST['txt_username'], $adm_password, $adm_salt, $_POST['txt_firstname'], $_POST['txt_lastname'])) {
+                    if ($adminClass->Insert($_POST['txt_username'], $adm_password, $adm_salt, $_POST['txt_fullname'], $_POST['txt_description'])) {
                         echo "<script>
                             Swal.fire({
                                 title: 'เพิ่มข้อมูลผู้ดูแลสำเร็จ',
@@ -281,7 +277,7 @@
             }
         } else if (isset($_POST['btn_editAdmin'])) {
         
-            if ($adminClass->Update($_POST['txt_adm_id_edit'], $_POST['txt_username_edit'], $_POST['txt_firstname_edit'], $_POST['txt_lastname_edit'], $_POST['select_level'])) {
+            if ($adminClass->Update($_POST['txt_adm_id_edit'], $_POST['txt_username_edit'], $_POST['txt_fullname_edit'], $_POST['txt_description_edit'], $_POST['select_level'])) {
                 if ($_POST['txt_password_edit'] !== '') {
                     $salt_new = $encodeClass->RandomSalt();
                     $password_new = $_POST['txt_password_edit'];

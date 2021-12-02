@@ -24,7 +24,7 @@
         }
 
         public function Insert($user, $pass, $salt, $fname, $lname) {
-            $sql = "INSERT INTO $this->table (adm_username, adm_password, adm_salt, adm_firstname, adm_lastname) 
+            $sql = "INSERT INTO $this->table (adm_username, adm_password, adm_salt, adm_fullname, adm_description) 
                     VALUES (?, ?, ?, ?, ?)";
 
             $insert = $this->db->prepare($sql);
@@ -42,8 +42,8 @@
         public function Update($id, $user, $fname, $lname, $status) {
             $sql = "UPDATE $this->table 
                 SET adm_username = ?,
-                    adm_firstname = ?,
-                    adm_lastname = ?,
+                    adm_fullname = ?,
+                    adm_description = ?,
                     adm_status = ?,
                     updated_at = NOW()
                     WHERE adm_id = ?";

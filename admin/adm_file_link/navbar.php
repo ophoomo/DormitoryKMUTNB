@@ -29,7 +29,7 @@
                 <i class="far fa-user-circle text-xl"></i>
             </div>
             <div class="text-sm mb:text-md mt-1.5 sm:mt-1">
-                <?php echo 'ADMIN : '.$_SESSION['adm_firstname']; ?>
+                <?php echo 'ADMIN : '.explode(' ', $_SESSION['adm_fullname'])[0] ?>
             </div>
         </a>
     </div>

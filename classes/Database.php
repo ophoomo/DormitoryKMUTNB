@@ -8,7 +8,6 @@
         private $database = "db_dorm_kmutnb_pcb";
         protected $db; // is database connected -> for use short name
 
-
         public function __construct() {
             try {
                 // echo "Connection Success";

@@ -44,7 +44,7 @@
         $adm_username = $_POST['txt_username'];
         $adm_password = $_POST['txt_password'];
 
-        $findAccount = $admClass->Find('adm_id, adm_firstname, adm_lastname, adm_username, adm_password, adm_salt', 'adm_username', $adm_username);
+        $findAccount = $admClass->Find('adm_id, adm_fullname, adm_description, adm_username, adm_password, adm_salt', 'adm_username', $adm_username);
         $dataAdm = $findAccount->fetch(PDO::FETCH_ASSOC);
 
         if ($findAccount->rowCount() === 0) {
@@ -79,8 +79,8 @@
                     }, 2000)); 
                 </script>";
                 $_SESSION['adm_id'] = $dataAdm['adm_id'];
-                $_SESSION['adm_firstname'] = $dataAdm['adm_firstname'];
-                $_SESSION['adm_lastname'] = $dataAdm['adm_lastname'];
+                $_SESSION['adm_fullname'] = $dataAdm['adm_fullname'];
+                $_SESSION['adm_description'] = $dataAdm['adm_description'];
             } else {
                 echo "<script>
                     Swal.fire({

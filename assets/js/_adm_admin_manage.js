@@ -2,10 +2,23 @@ function togglePopupInsert() {
     document.getElementsByClassName('popupInsert')[0].classList.toggle('hidden');
 }
 
+function deactionPermision() {
+    Swal.fire({
+        title: 'คุณไม่มีสิทธิในการกระทำนี้',
+        text: '',
+        icon: 'warning',
+        showConfirmButton: false,
+        showCancelButton: false,
+        timer: 1000
+    })
+}
+
 function togglePopupEdit(index) {
-    document.getElementsByClassName('popupEdit')[0].classList.toggle('hidden');
-    if (index != undefined){
+    if (index != undefined && index != -1){
+        document.getElementsByClassName('popupEdit')[0].classList.toggle('hidden');
         showDataForEdit(index);
+    } else {
+        deactionPermision();
     }
 }
 
@@ -19,8 +32,8 @@ document.onkeydown = function(evt) {
 function showDataForEdit(index) {
     let valueInRow = document.getElementsByClassName('valueAdmin')[index];
     document.forms['form_editDataAdmin']['txt_adm_id_edit'].value = valueInRow.getElementsByClassName('adm_id')[0].innerText;
-    document.forms['form_editDataAdmin']['txt_firstname_edit'].value = valueInRow.getElementsByClassName('firstname')[0].innerText;
-    document.forms['form_editDataAdmin']['txt_lastname_edit'].value = valueInRow.getElementsByClassName('lastname')[0].innerText;
+    document.forms['form_editDataAdmin']['txt_fullname_edit'].value = valueInRow.getElementsByClassName('fullname')[0].innerText;
+    document.forms['form_editDataAdmin']['txt_description_edit'].value = (valueInRow.getElementsByClassName('description')[0].innerText == '-' ? '' : valueInRow.getElementsByClassName('description')[0].innerText);
     document.forms['form_editDataAdmin']['txt_username_edit'].value = valueInRow.getElementsByClassName('username')[0].innerText;
 }
 
@@ -37,7 +50,7 @@ document.getElementsByClassName('btn_changePassword')[0].addEventListener('click
 });
 
 document.getElementsByClassName('btn_addAdmin')[0].addEventListener('click', () => { togglePopupInsert(); })
-document.getElementsByClassName('btn_cancelEdit')[0].addEventListener('click', () => { togglePopupEdit(); })
+document.getElementsByClassName('btn_cancelEdit')[0].addEventListener('click', () => { togglePopupEdit(-2); })
 document.getElementsByClassName('btn_cancelInsert')[0].addEventListener('click', () => { togglePopupInsert(); })
 
 for (let i = 0; i < document.getElementsByClassName('btn_delete_admin_check').length; i++) {
