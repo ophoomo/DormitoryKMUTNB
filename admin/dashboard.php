@@ -24,6 +24,8 @@
     $branchClass = new Branch();
     $exchangeValueClass = new ExchangeValue();
     $Std_data = array(0, 0, 0, 0, 0, 0, 0);
+
+    $stdClass->autoChangeStatusStd(1);
     
     // All std
     $sql = $stdClass->Count('std_id', 'count');

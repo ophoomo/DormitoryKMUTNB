@@ -105,7 +105,7 @@
                 $valueFac = $facClass->Find('fac_name', 'fac_id', $valueBranch['fac_id']);
                 $valueFac = $valueFac->fetch(PDO::FETCH_ASSOC);
             }
-        array_push($dataTable, array("", "", "", "", "", "", "", "", "", "", "", ""));
+            array_push($dataTable, array("", "", "", "", "", "", "", "", "", "", "", ""));
 
             $dataTable[$i][0] = $valueStd['std_id'];
             $dataTable[$i][1] = $valueStd['std_id_student'];
@@ -137,63 +137,7 @@
             $i++;
         }
         echo "<script>var data_Table = ". json_encode($dataTable) .";</script>";
-
     ?>
-
-    <script type="text/javascript">
-        function ExportToExcel(type, fn, dl) {
-            var elt = document.getElementById('tbl_exporttable_to_xls');
-            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
-            return dl ?
-                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-                XLSX.writeFile(wb, fn || ('ข้อมูลนักศึกษาหอพัก_มจพ_ปราจีนบุรี.' + (type || 'xlsx')));
-        }
-    </script>
-    
-    <table id="tbl_exporttable_to_xls" class="hidden">
-        <thead>
-            <tr class="h-12">
-                <th>เข้าร่วมเมื่อ</th>
-                <th>ลำดับ</th> 
-                <th>รหัสนักศึกษา</th> 
-                <th>คำนำ</th> 
-                <th>ชื่อจริง</th> 
-                <th>นามสกุล</th> 
-                <th>เบอร์โทรศัพท์</th> 
-                <th>คณะ</th> 
-                <th>สาขา</th>
-                <th>สถานะ นศ.</th>
-                <th>อยู่ห้องพัก</th>
-                <th>หอพัก</th>
-                <th>จากจังหวัด</th>
-                <th>ที่อยู่นักศึกษา</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-                for ($i = 0; $i < count($dataTable); $i++):
-            ?>
-                <tr>
-                    <td><?php echo $dataTable[$i][11] ?></td>
-                    <td><?php echo ($i+1); ?></td>
-                    <td><?php echo $dataTable[$i][1] ?></td>
-                    <td><?php echo $dataTable[$i][2] ?></td>
-                    <td><?php echo $dataTable[$i][3] ?></td>
-                    <td><?php echo $dataTable[$i][4] ?></td>
-                    <td><?php echo $dataTable[$i][5] ?></td>
-                    <td><?php echo $dataTable[$i][6] ?></td>
-                    <td><?php echo $dataTable[$i][7] ?></td>
-                    <td><?php echo $dataTable[$i][8] ?></td>
-                    <td><?php echo $dataTable[$i][9] ?></td>
-                    <td><?php echo $buildingNameForXlsx[$i] ?></td>
-                    <td><?php echo $dataTable[$i][10] ?></td>
-                    <td><?php echo $addressStdForXlsx[$i] ?></td>
-                </tr>
-            <?php 
-                endfor;
-            ?>
-        </tbody>
-    </table>
 
     <div class="flex">
         <!-- Sidebar -->
@@ -220,9 +164,9 @@
                         <p class="text-lg text-center sm:text-left mb-5 mt-10 sm:mb-6 text-xl mb-2 w-11/12 sm:pl-2 text-red-900">
                             ข้อมูลนักศึกษาหอพัก
                         </p>
-                        <button class="btn btn-xs w-9/12 mb-4 sm:mb-0 sm:mt-6 md:w-40" onclick="ExportToExcel('xlsx')">
+                        <a href="./export_data.php" class="btn btn-xs w-9/12 mb-4 sm:mb-0 sm:mt-6 md:w-40">
                             ส่งออกข้อมูลนักศึกษา
-                        </button>
+                        </a>
                     </div>
 
                     <div class="flex flex-col justify-center items-center overflow-x-auto p-1.5 w-11/12">
@@ -394,6 +338,7 @@
         }
     }
 
+        $stdClass->autoChangeStatusStd(1);
         $stdClass->autoDestroyStdAll(7);
         $stdClass->autoDestroyStdIsNotRoomId(5);
     

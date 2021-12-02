@@ -114,7 +114,7 @@ function checkEmpty() {
 
 function popupForRegister() {
     Swal.fire({
-        title: 'คุณต้องสมัครสมาชิกใช่หรือไม่',
+        title: 'คุณต้องการสมัครสมาชิกใช่หรือไม่',
         text: 'โปรดตรวจสอบข้อมูลให้ถูกต้องก่อนทำการสมัครสมาชิก',
         icon: 'warning',
         showCancelButton: true,

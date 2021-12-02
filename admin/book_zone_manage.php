@@ -52,7 +52,6 @@
         .dataTables_length {
             font-size: 14px;
             margin-top: 0.2rem;
-            display: none !important;
         }
 
         .dataTables_paginate a {

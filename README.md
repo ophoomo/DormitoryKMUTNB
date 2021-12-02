@@ -18,7 +18,8 @@
 ## System recomment:
 - autoDestroyStdAll for not update&active >= 7 year
 - autoDestroyStdIsNotRoomId for not update&active >= 5 year 
-- autoDestroyRoomByStd for not update&active >= 4 year 
+- autoDestroyRoomByStd for not update&active >= 4 year
+- autoChangeStatusStd for not created >= 1 year
 
 ## For dev:
 tb_branch

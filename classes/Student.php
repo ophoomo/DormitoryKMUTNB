@@ -338,7 +338,7 @@
             return $query;
         }
 
-        
+
         public function autoDestroyStdIsNotRoomId($year) {
             $sql = "DELETE FROM $this->table
                     WHERE YEAR(updated_at) <= EXTRACT(YEAR FROM CURRENT_DATE) - $year
@@ -366,6 +366,17 @@
                     SET room_id = NULL
                     WHERE $this->table.room_id = $room_id";
 
+            $query = $this->db->prepare($sql);
+            $query->execute();
+
+            return $query;
+        }
+
+        public function autoChangeStatusStd($year) {
+            $sql = "UPDATE $this->table
+                    SET std_status = 0
+                    WHERE YEAR(created_at) <= EXTRACT(YEAR FROM CURRENT_DATE) - $year";
+            
             $query = $this->db->prepare($sql);
             $query->execute();
 
