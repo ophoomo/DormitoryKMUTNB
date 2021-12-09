@@ -17,7 +17,7 @@ document.getElementsByClassName('btn_destroyStdFormYearCheck')[0].addEventListen
     if (document.getElementsByClassName('select_year')[0].value != '- เลือกปีที่ต้องการ -') {
         Swal.fire({
             title: 'คุณต้องการลบข้อมูล<br>นศ. ปี '+document.getElementsByClassName('select_year')[0].value+' ออกจากระบบ ? <span class="text-sm text-red-900">(1/2)</span>',
-            text: 'โปรดยืนยันการลบข้อมูลของนักศึกษา !!',
+            text: 'โปรดยืนยันการลบข้อมูลของนักศึกษา !',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -27,8 +27,8 @@ document.getElementsByClassName('btn_destroyStdFormYearCheck')[0].addEventListen
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
-                    title: 'โปรดยืนยันการลบข้อมูล<br>นศ. ปี '+document.getElementsByClassName('select_year')[0].value+' ออกจากระบบ อีกครั้ง <span class="text-sm text-red-900">(2/2)</span> !!',
-                    text: 'โปรดยืนยันอีกครั้ง !!',
+                    title: 'โปรดยืนยันการลบข้อมูล<br>นศ. ปี '+document.getElementsByClassName('select_year')[0].value+' ออกจากระบบ อีกครั้ง! <span class="text-sm text-red-900">(2/2)</span>',
+                    text: 'โปรดยืนยันอีกครั้ง !',
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -71,7 +71,7 @@ document.getElementsByClassName('btn_destroyAllStdCheck')[0].addEventListener('c
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
-                title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง <span class="text-sm text-red-900">(2/3)</span> !!',
+                title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง! <span class="text-sm text-red-900">(2/3)</span>',
                 text: 'โปรดยืนยันอีกครั้ง !!',
                 icon: 'warning',
                 showCancelButton: true,
@@ -82,8 +82,8 @@ document.getElementsByClassName('btn_destroyAllStdCheck')[0].addEventListener('c
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง <span class="text-sm text-red-900">(3/3)</span> !!',
-                        text: 'โปรดยืนยันอีกครั้ง !!',
+                        title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง! <span class="text-sm text-red-900">(3/3)</span>',
+                        text: 'โปรดยืนยันอีกครั้ง !',
                         icon: 'warning',
                         showCancelButton: true,
                         confirmButtonColor: '#3085d6',

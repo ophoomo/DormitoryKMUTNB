@@ -362,7 +362,7 @@ function datediff(first, second) {
 function callDateRange(statusDateRage, value_date_range_old) {
     // let date_range_old = document.getElementsByClassName('txt_timeRange')[0].value.split(' - ')[(statusDateRage == 0 ? 1 : 0)].split('/');
     let date_range = value_date_range_old.split(' - ')[(parseInt(statusDateRage) === 0 ? 1 : 0)];
-
+    console.log(date_range);
     nowTime = new Date();
     let hour = 23-(nowTime.getHours());
     let min = 59-(nowTime.getMinutes());

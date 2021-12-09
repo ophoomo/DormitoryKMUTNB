@@ -42,8 +42,7 @@ async function getData() {
         howmush:        document.forms["data"]["howmush"].value,
         room_name:      document.forms["data"]["room_name"].value,
     };
-    console.log()
-    console.log(data)
+    // console.log(data)
 }
 
 async function getAppendData() {

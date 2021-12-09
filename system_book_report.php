@@ -27,7 +27,7 @@
         $findStd = $stdClass->Find('*', 'std_id', $_SESSION['std_id']);
         $dataStd = $findStd->fetch(PDO::FETCH_ASSOC);
         if ($dataStd['room_id'] == NULL) {
-            header("Location: ./system_book.php?branch=".$dataStd['branch_id']."&building=0&floor=0");
+            header("Location: ./system_book.php");
         }
         $findBranch = $branchClass->Find('fac_id, branch_name', 'branch_id', $dataStd['branch_id']);
         $dataBranch = $findBranch->fetch(PDO::FETCH_ASSOC);
@@ -215,9 +215,11 @@
                                 class="defocus p-5 pt-3 pb-3 w-full bg-red-700 hover:bg-red-800 shadow-lg border-r-4 border-red-900
                                         transform scale-100 cursor-pointer rounded-b-2xl text-white duration-200">
                     </div>
-                    
-                    <div class="mt-10 text-center">
-                        <p class="defocus text-red-800 text-xs opacity-80 font_kanit">*** หากต้องการยกเลิกการจอง กรุณาติดต่อเจ้าหน้าที่หอพัก ***</p>
+                </div>
+                
+                <div class="mt-4 text-center w-full flex flex-row justify-end">
+                    <div onclick="cancelBook()" class="p-2 pl-4 pr-4 text-sm w-content bg-gray-700 duration-200 rounded-md text-white cursor-pointer hover:bg-black">
+                        ยกเลิกการจองห้องพัก
                     </div>
                 </div>
 
@@ -271,6 +273,12 @@
         
     </div>
 
+    <form action="#" method="POST" class="hidden">
+        <input id="toggleStatus" name="toggleStatus" type="submit">
+        <input type="text" name="5f14ac246f960a3173a16561d243a8f5b07cfcec5c787f09de52f318d746c833" id="5f14ac246f960a3173a16561d243a8f5b07cfcec5c787f09de52f318d746c833">
+        <input type="submit" name="3c4ce757715a8b7fa461fcbf6cc91310d69661b3f7359d9992eff6217b8f6390" id="3c4ce757715a8b7fa461fcbf6cc91310d69661b3f7359d9992eff6217b8f6390" class="hidden">
+    </form>
+
 
     <script src="./assets/js/_title_change.js" onload="switchTitle('รายงานการจองห้องพัก');"></script>
     <script src="./assets/js/_system_sidebar.js"></script>
@@ -295,6 +303,65 @@
                     window.location.href='login.php'
                 }, 3000));
             </script>";
+        }
+
+        $statusBook = $statusClass->Find('status_id, status_switch, status_date_start, status_date_stop', 'status_name', 'system_book');
+        $statusBook = $statusBook->fetch(PDO::FETCH_ASSOC);
+
+        echo "<script type='text/javascript'>
+            setValueStatusBook(".json_encode($statusBook).");
+        </script>";
+        
+        if (isset($_POST['3c4ce757715a8b7fa461fcbf6cc91310d69661b3f7359d9992eff6217b8f6390'])) {
+            if (intval($_POST['5f14ac246f960a3173a16561d243a8f5b07cfcec5c787f09de52f318d746c833']) >= 0) {
+                if ($stdClass->book_destory($_SESSION['std_id'])) {
+                    echo "<script>  
+                        Swal.fire({
+                            title: 'ยกเลิกการจองห้องพักสำเร็จ',
+                            text: '',
+                            icon: 'success',
+                            showConfirmButton: false,
+                            showCancelButton: false,
+                            confirmButtonColor: '#d33',
+                            cancelButtonColor: '#3085d6'
+                        }).then(setTimeout(() => {
+                            window.location.href='system_book.php'
+                        }, 2000));
+                    </script>";
+                } else {
+                    echo "<script>  
+                        Swal.fire({
+                            title: 'เกิดข้อผิดพลาด, โปรดติดต่อเจ้าหน้าที่',
+                            text: '',
+                            icon: 'error',
+                            showConfirmButton: false,
+                            showCancelButton: false,
+                            confirmButtonColor: '#d33',
+                            cancelButtonColor: '#3085d6'
+                        }).then(setTimeout(() => {
+                            window.location.href='system_book.php'
+                        }, 2000));
+                    </script>";
+                }
+            } else {
+                echo "<script type='text/javascript'>
+                    Swal.fire({
+                        title: 'ไม่สามารถยกเลิกการจองได้',
+                        html: 'จะสามารถยกเลิกได้ในช่วงที่เปิดให้จองห้องพักเท่านั้น<br>โปรดติดต่อเจ้าหน้าที่เพื่อทำการยกเลิก!',
+                        icon: 'error',
+                        showConfirmButton: true,
+                        showCancelButton: false,
+                        confirmButtonColor: '#cc0c62',
+                        confirmButtonText: 'เข้าใจแล้ว'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location = './system_book.php';
+                        } else {
+                            window.location = './system_book.php';
+                        }
+                    })
+                </script>";
+            }
         }
 
     ?>

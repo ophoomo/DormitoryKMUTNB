@@ -37,3 +37,72 @@ function is_disease() {
             document.getElementsByClassName('is_disease')[1].classList.remove('hidden');
     }
 }
+
+
+
+var status_book = null;
+
+function reportData() {
+    if (status_book === null) {
+        return false;
+    } else {
+        return true;    
+    }
+}
+
+function setValueStatusBook(status_book) {
+    this.status_book = status_book;
+}
+
+async function getData() {
+    let checkData = setInterval(() => {
+        if (!reportData()) {
+            console.log('No data!');
+        } else {
+            pushDate();
+            clearInterval(checkData);
+        }
+    }, 1000);
+}
+
+
+function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+}
+
+function datediff(first, second) {
+    return (Math.round((second-first)/(1000*60*60*24)));
+}
+
+
+function pushDate() {
+    console.log(this.status_book);
+    let nowTime = new Date();
+    let day = (datediff(parseDate(nowTime.toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }).split(',')[0]), parseDate(this.status_book.status_date_stop)));
+    document.getElementById('5f14ac246f960a3173a16561d243a8f5b07cfcec5c787f09de52f318d746c833').value = day;
+}
+
+async function main() {
+    await getData();
+}
+
+
+main();
+
+function cancelBook() {
+    Swal.fire({
+        title: 'คุณต้องยกเลิกการจองห้องพัก ?',
+        text: 'โปรดยืนยันการกระทำนี้อีกครั้ง',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'ยืนยัน',
+        cancelButtonText: 'ยกเลิก'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById('3c4ce757715a8b7fa461fcbf6cc91310d69661b3f7359d9992eff6217b8f6390').click();
+        }
+    })
+}

@@ -160,8 +160,8 @@ function confirmDestroyRoomFormSelect() {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
-                    title: 'โปรดยืนยันการนำ นศ. <br>ออกจากห้องพักที่คุณเลือกอีกครั้ง',
-                    text: 'โปรดยืนยันอีกครั้ง !!',
+                    title: 'โปรดยืนยันการนำ นศ. <br>ออกจากห้องพักที่คุณเลือกอีกครั้ง !',
+                    text: 'โปรดยืนยันอีกครั้ง !',
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -199,7 +199,7 @@ document.getElementsByClassName('btn_destroyRoomFormYearCheck')[0].addEventListe
             if (result.isConfirmed) {
                 Swal.fire({
                     title: 'คุณต้องการนำ<br>นศ. ปี '+document.getElementsByClassName('select_year')[0].value+' ออกจากห้องพัก<br>โปรดยืนยันอีกครั้ง !',
-                    text: 'โปรดยืนยันอีกครั้ง !!',
+                    text: 'โปรดยืนยันอีกครั้ง !',
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -241,8 +241,8 @@ document.getElementsByClassName('btn_destroyRoomAllStdCheck')[0].addEventListene
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire({
-                title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง !!',
-                text: 'โปรดยืนยันอีกครั้ง !!',
+                title: 'โปรดยืนยันการนำนักศึกษาทุกคน<br>ออกจากห้องพักอีกครั้ง !',
+                text: 'โปรดยืนยันอีกครั้ง !',
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
