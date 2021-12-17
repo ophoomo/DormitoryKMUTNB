@@ -383,5 +383,38 @@
             return $query;
         }
 
+        // Dashboard member
+        public function getDataToReportMember($how) {
+            switch (intval($how)) {
+                case 1:
+                    $sql = "SELECT SUM(tb_rooms.room_member) as result FROM `tb_rooms` 
+                            LEFT JOIN tb_floors ON tb_rooms.floor_id = tb_floors.floor_id
+                            LEFT JOIN tb_buildings ON tb_floors.building_id = tb_buildings.building_id
+                            WHERE tb_buildings.building_gender = 0 OR tb_buildings.building_gender = 2";
+                    break;
+                case 2:
+                    $sql = "SELECT SUM(tb_rooms.room_member) as result FROM `tb_rooms` 
+                            LEFT JOIN tb_floors ON tb_rooms.floor_id = tb_floors.floor_id
+                            LEFT JOIN tb_buildings ON tb_floors.building_id = tb_buildings.building_id
+                            WHERE tb_buildings.building_gender = 1 OR tb_buildings.building_gender = 2";
+                    break;
+                case 3:
+                    $sql = "SELECT COUNT(tb_students.room_id) as result 
+                            FROM tb_students WHERE tb_students.room_id IS NOT NULL 
+                            AND tb_students.std_sex = 0 OR tb_students.std_sex = 2";
+                    break;
+                case 4:
+                    $sql = "SELECT COUNT(tb_students.room_id) as result
+                            FROM tb_students WHERE tb_students.room_id IS NOT NULL 
+                            AND tb_students.std_sex = 1 OR tb_students.std_sex = 2";
+                    break;
+            }
+
+            $query = $this->db->prepare($sql);
+            $query->execute();
+
+            return $query;
+        }
+
     }
 ?>

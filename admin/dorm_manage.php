@@ -133,6 +133,11 @@
                                     <?php
                                             $i++;
                                         endwhile; 
+                                        if ($i === 0):
+                                    ?>
+                                        <td colspan="7" class="w-full text-center text-sm text-red-900">ไม่พบข้อมูล</td>
+                                    <?php
+                                        endif;
                                     ?>
                                 </tbody>
                             </table>

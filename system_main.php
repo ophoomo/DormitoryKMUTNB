@@ -3,8 +3,6 @@
     
     require_once ('./disable_error_report.php');
     require_once ('./classes/Student.php');
-    require_once ('./classes/Room.php');
-    require_once ('./classes/Floor.php');
     require_once ('./classes/Status.php');
 
     $statusClass = new Status();
@@ -140,37 +138,31 @@
         }
 
         function callData() {
-            // echo "callData() working";
+            echo "<script type='text/javascript'>Php working!</script>";
             $stdClass = new Student();
-            $roomClass = new Room();
-            $floorClass = new Floor();
             $Person_totals = array(0, 0, 0, 0);
             $Bed_totals = array(0, 0);
             $Bed_isUse = array(0, 0);
-    
-            $dataRoom = $roomClass->Select_All('floor_id, room_id, room_status, room_member');
-            while ($valueRoom = $dataRoom->fetch(PDO::FETCH_ASSOC)) {
-                if (intval($valueRoom['room_status']) === 1) {
-                    $dataStd = $stdClass->Select_All('room_id, std_sex');
-                    while ($valueStd = $dataStd->fetch(PDO::FETCH_ASSOC)) {
-                        if ($valueStd['room_id'] != NULL && $valueStd['room_id'] === $valueRoom['room_id']) {
-                            switch ($valueStd['std_sex']) {
-                                case 0: $Bed_isUse[0] += 1; break;
-                                case 1: case 2: $Bed_isUse[1] += 1; break;
-                            }
-                        }
-                    }
-    
-                    $dataFloor = $floorClass->Find('building_id', 'floor_id', $valueRoom['floor_id']);
-                    while ($valueFloor = $dataFloor->fetch(PDO::FETCH_ASSOC)) {
-                        switch (intval($valueFloor['building_id'])) {
-                            case 1: $Bed_totals[0] += intval($valueRoom['room_member']); break;
-                            case 2: case 3: $Bed_totals[1] += intval($valueRoom['room_member']); break;
-                        }
-                    }
-                }
-            }
-    
+            
+            $tempBad = $stdClass->getDataToReportMember(1);
+            $tempBad = $tempBad->fetch(PDO::FETCH_ASSOC);
+            $Bed_totals[0] = $tempBad['result'];
+
+            $tempBad = $stdClass->getDataToReportMember(2);
+            $tempBad = $tempBad->fetch(PDO::FETCH_ASSOC);
+            $Bed_totals[1] = $tempBad['result'];
+
+            $tempBad = $stdClass->getDataToReportMember(3);
+            $tempBad = $tempBad->fetch(PDO::FETCH_ASSOC);
+            $Bed_isUse[0] = $tempBad['result'];
+
+            $tempBad = $stdClass->getDataToReportMember(4);
+            $tempBad = $tempBad->fetch(PDO::FETCH_ASSOC);
+            $Bed_isUse[1] = $tempBad['result'];
+
+            echo "<script>console.log(".json_encode($Bed_totals).")</script>";
+            echo "<script>console.log(".json_encode($Bed_isUse).")</script>";
+
 
             $sql = $stdClass->Count_where('std_id', 'count', 'room_id IS NOT NULL');
             $Person_totals[0] = $sql->fetch(PDO::FETCH_ASSOC);
@@ -184,7 +176,7 @@
             $sql = $stdClass->Count_where('std_sex', 'count', 'std_sex = 2 AND room_id IS NOT NULL');
             $Person_totals[3] = $sql->fetch(PDO::FETCH_ASSOC);
 
-            echo "<script>
+            echo "<script type='text/javascript'>
                     setTimeout(() => {  
                         setData(0, '".$Bed_totals[0]."');
                         setData(1, '".$Bed_totals[1]."');

@@ -149,7 +149,7 @@
                                         <i class="fas fa-angle-down fa-sm transform rotate-90 trasition-all duration-300"></i>
                                     </div>
                                     <form name="frm_floor" action="#" method="POST">
-                                        <div class="flex flex-row gap-x-4 main_tools">
+                                        <div class="flex flex-row gap-x-4 main_tools mr-0 md:mr-4">
                                             <div onclick="editFloorRoom(this, 0)">
                                                 <input class="floor_id" name="txt_floor_id" type="text" value="<?php echo ($valueFloor['floor_id']) ?>" style="display: none;">
                                                 <input class="floor_name" name="txt_floor_name" type="text" value="<?php echo ($valueFloor['floor_name']) ?>" style="display: none;">
@@ -185,11 +185,11 @@
                                                         echo $valueRoom['room_name'];
                                                         if (intval($countMember['RESULT']) < intval($valueRoom['room_member'])):
                                                     ?>
-                                                            <span class='absolute sm_hidden w-full -right-52 text-xs mt-0.5 text-green-800'>
+                                                            <span class='absolute sm_hidden w-full -right-40 text-xs mt-0.5 text-green-800'>
                                                     <?php 
                                                         else:
                                                     ?>
-                                                            <span class='absolute sm_hidden w-full -right-52 text-xs mt-0.5 text-red-700'>
+                                                            <span class='absolute sm_hidden w-full -right-40 text-xs mt-0.5 text-red-700'>
                                                     <?php 
                                                         endif;
                                                     ?>
@@ -228,7 +228,7 @@
                                 $i++;
                             endwhile;
                             if ($i <= 0)
-                                echo "<p class='ml-36 mt-24 p-2 text-red-800'>ยังไม่มีข้อมูลชั้น</p>";
+                                echo "<p class='ml-36 mt-24 p-2 text-red-800'>ยังไม่มีข้อมูล</p>";
                         ?>
                     </div>
 
