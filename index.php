@@ -278,7 +278,6 @@
     <script type="text/javascript" src="./assets/js/_index.js"></script>
     <script type="text/javascript">
         
-        console.log(parseInt(document.getElementById('status_book').value));
         if(parseInt(document.getElementById('status_book').value) == 1 || parseInt(document.getElementById('status_book').value) == 3) {
             setTimeout(() => {
                 document.getElementById('alertStatusBook').classList.remove('hidden');

@@ -1,6 +1,6 @@
-# เว็บไซต์บริหารจัดการหอพักนักศึกษา
+# Student dormitory management website
 
-## เครื่องมือ 
+## Tools
 1. PHP
 2. SweetAlert2
 3. Javascirpt
@@ -10,7 +10,7 @@
 7. Daisyui
 8. jsToExcel
 
-## คณะผู้จัดทำ
+## Creators
 1. SamaHam
 2. Thanaphoom
 3. Mashiro

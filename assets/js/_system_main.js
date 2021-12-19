@@ -24,7 +24,7 @@ async function setData(n, value) {
     await pushText(n, value);
     await setAppendDataLocal(n, value);
     await getDataSave();
-    console.log('Php working!!')
+    console.log('Php working!!');
 }
 
 async function pushText(n, value) {
@@ -45,7 +45,7 @@ async function getDataSave() {
             document.getElementsByClassName('pullData')[i].innerText = dataAppend_serilized[strData[i]].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");   
         } catch (error) { continue; }
     }
-    console.log('Js working!!')
+    console.log('Js working!!');
 }
 
 window.onload = setTimeout(() => {

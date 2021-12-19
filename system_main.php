@@ -160,9 +160,6 @@
             $tempBad = $tempBad->fetch(PDO::FETCH_ASSOC);
             $Bed_isUse[1] = $tempBad['result'];
 
-            echo "<script>console.log(".json_encode($Bed_totals).")</script>";
-            echo "<script>console.log(".json_encode($Bed_isUse).")</script>";
-
 
             $sql = $stdClass->Count_where('std_id', 'count', 'room_id IS NOT NULL');
             $Person_totals[0] = $sql->fetch(PDO::FETCH_ASSOC);
@@ -180,8 +177,8 @@
                     setTimeout(() => {  
                         setData(0, '".$Bed_totals[0]."');
                         setData(1, '".$Bed_totals[1]."');
-                        setData(2, '".($Bed_totals[0]-$Bed_isUse[0])."');
-                        setData(3, '".($Bed_totals[1]-$Bed_isUse[1])."');
+                        setData(2, '".(intval($Bed_totals[0])-intval($Person_totals[1]['count']))."');
+                        setData(3, '".(intval($Bed_totals[1]) - intval((intval($Person_totals[2]['count']) + intval($Person_totals[3]['count']))))."');
                         setData(4, '".($Person_totals[0]['count'])."');
                         setData(5, '".($Person_totals[1]['count'])."');
                         setData(6, '".($Person_totals[2]['count'])."');
@@ -190,8 +187,8 @@
                             setTimeout(() => {  
                                 setData(0, '".$Bed_totals[0]."');
                                 setData(1, '".$Bed_totals[1]."');
-                                setData(2, '".($Bed_totals[0]-$Bed_isUse[0])."');
-                                setData(3, '".($Bed_totals[1]-$Bed_isUse[1])."');
+                                setData(2, '".(intval($Bed_totals[0])-intval($Person_totals[1]))."');
+                                setData(3, '".(intval($Bed_totals[1]) - intval((intval($Person_totals[2]) + intval($Person_totals[3]))))."');
                                 setData(4, '".($Person_totals[0]['count'])."');
                                 setData(5, '".($Person_totals[1]['count'])."');
                                 setData(6, '".($Person_totals[2]['count'])."');
