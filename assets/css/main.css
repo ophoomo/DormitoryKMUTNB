@@ -2178,7 +2178,10 @@ body {
     display: grid;
     grid-template-columns: 200px 200px 300px;
     grid-template-rows: 40px 40px 40px 40px;
-    grid-template-areas: 'title title title' 'man women women2' 'manT1 womenT1 women2T1' 'manT1 womenT1 women2T2';
+    grid-template-areas:    'title title title' 
+                            'man women women2' 
+                            'manT1 womenT1 women2T1' 
+                            'manT1 womenT1 women2T2';
     justify-content: center; }
     .container_fee .areaFee .room_fee .man,
     .container_fee .areaFee .room_fee .women,

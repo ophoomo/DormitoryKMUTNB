@@ -81,7 +81,7 @@
             </div>
         <?php elseif (isset($_SESSION['adm_id'])): ?>
             <div class="item adminLogin">
-                <a href="admin.php" style="color: rgb(255, 230, 0);">จัดการระบบแอดมิน</a>
+                <a href="./admin/dashboard.php" style="color: rgb(255, 230, 0);">จัดการระบบหอพัก</a>
             </div>
         <?php else: ?>
             <div id="popupLogin" class="item destroyUserLogin">

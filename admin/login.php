@@ -105,7 +105,7 @@
 
             <div class="areaLogin">
                 <img src="../assets/img/logoKmutnb.webp" alt="" style="margin-top: -126px; width: 160px; height: 160px; margin-bottom: 28px;">
-                <p>เข้าสู่ระบบเจ้าหน้าที่หอพัก</p>
+                <p class="text-title-login-manager">เข้าสู่ระบบเจ้าหน้าที่หอพัก</p>
                 <div class="input">
                     <i class="fas fa-user"></i>
                     <i class="fas fa-lock"></i>
@@ -123,3 +123,15 @@
     <script src="./assets/js/_login.js"></script>
 </body>    
 </html>
+
+
+<style>
+    @media screen and (max-width: 768px) {
+        .text-title-login-manager {
+            font-size: 1.4rem !important;
+        }
+    }   
+
+    .text-title-login-manager {
+    }    
+</style>

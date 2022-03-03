@@ -44,6 +44,16 @@
 </head>
 <body>
 
+    <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80vh;
+    ">
+        <h3>กำลังดำเนินการส่งออกข้อมูลนักศึกษา</h3>
+    </div>
+
     <?php
         
         $dataStd = $stdClass->Select_Sort('std_id, room_id, branch_id, std_status, std_id_student, std_sex, std_firstname, std_lastname, std_tel, std_address, created_at', 'created_at DESC', '', 0);
@@ -116,10 +126,9 @@
         window.onload = () => {
             ExportToExcel('xlsx');
             ExportToExcel2('xlsx');
-            window.location.href = './member_manage.php';
             setInterval(() => {
                 window.location.href = './member_manage.php';
-            }, 2000);
+            }, 4000);
         }
     </script>
 

@@ -29,8 +29,13 @@ function slideSidebar() {
 }
 
 if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] === 'dashboard') {
-    document.getElementsByClassName('watchMyWeb')[0].classList.remove('deactive')
+    document.getElementsByClassName('watchMyWeb')[0].classList.remove('deactive');
+} else if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] === 'news_manage') {
+    document.getElementsByClassName('websiteDetailManagerButton')[0].classList.remove('deactive');
+    document.getElementsByClassName('websiteDetailManagerButton')[1].classList.add('deactive');
 }
+
+
 
 // window.addEventListener("resize", () => {
 //     var width = document.body.clientWidth;
