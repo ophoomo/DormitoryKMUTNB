@@ -288,33 +288,32 @@
     ?>
 
     <script type="text/javascript">
-
-        var fac_id = [];
-        var branch_id = [];
-        var branch_name = [];
+        var dataBranchOnJs = {
+            fac_id: [],
+            branch_id: [],
+            branch_name: []
+        };
         var status_selectBranch = false;
+        
 
         setTimeout(() => {
+            dataBranchOnJs.fac_id.unshift(0);
             insertBranchForSelect();
         }, 1000);
-        
+
         function insertBranchForSelect() {
+            let select_faculty = document.getElementById("select_faculty");
             let select_branch = document.getElementById("select_branch");
-            
-            if (status_selectBranch) {
-                for (let i = select_branch.length-1; i > 0; i--) {
-                    select_branch.options[i] = null;
+            let tmpInnerHtml = '<option disabled selected>- กรุณาเลือกสาขา -</option>';
+            for (let i = 0; i < dataBranchOnJs.branch_id.length; i++) {
+                if (dataBranchOnJs.branch_name[i] != "-") {
+                    if (parseInt(select_faculty.value) == dataBranchOnJs.fac_id[i]) {
+                        console.log(dataBranchOnJs.branch_name[i]);
+                        tmpInnerHtml += '<option value="' + dataBranchOnJs.branch_id[i] + '">' + dataBranchOnJs.branch_name[i] + '</option>';
+                    }
                 }
             }
-            status_selectBranch = true;
-            for (let i = 0; i < branch_name.length; i++) {
-                if (fac_id[i] == document.getElementById('select_faculty').value) {
-                    let option_branch = document.createElement("option");
-                    option_branch.value = branch_id[i];
-                    option_branch.innerHTML = branch_name[i];
-                    select_branch.appendChild(option_branch);
-                }
-            }
+            select_branch.innerHTML = tmpInnerHtml;
         }
     </script>
 
@@ -906,9 +905,9 @@
 <?php
     while ($row = $find_branch->fetch(PDO::FETCH_ASSOC)) {
         echo "<script>
-            fac_id.push(".$row['fac_id'].");
-            branch_id.push(".$row['branch_id'].");
-            branch_name.push("."'".$row['branch_name']."'".");
+            dataBranchOnJs.fac_id.push(".$row['fac_id'].");
+            dataBranchOnJs.branch_id.push(".$row['branch_id'].");
+            dataBranchOnJs.branch_name.push("."'".$row['branch_name']."'".");
         </script>";
     }
 ?>

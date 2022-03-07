@@ -28,9 +28,9 @@ function slideSidebar() {
     document.getElementById('sidebar').classList.add('-ml-64');
 }
 
-if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] === 'dashboard') {
+if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] == 'dashboard') {
     document.getElementsByClassName('watchMyWeb')[0].classList.remove('deactive');
-} else if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] === 'news_manage') {
+} else if (window.location.pathname.split('.php')[0].split('/')[window.location.pathname.split('.php').length+1] == 'news_manage') {
     document.getElementsByClassName('websiteDetailManagerButton')[0].classList.remove('deactive');
     document.getElementsByClassName('websiteDetailManagerButton')[1].classList.add('deactive');
 }

@@ -8,7 +8,7 @@ var array_areaBook = null;
 var array_book = null;
 
 function reportData() {
-    if (status_book === null) {
+    if (status_book == null) {
         return false;
     } else {
         // console.log('status_book', status_book);
@@ -34,7 +34,7 @@ function setValuesForBook(status_book, array_dataUser, array_branch, array_build
     this.array_book = array_book;
 }
 
-async function getData() {
+function getData() {
     let checkData = setInterval(() => {
         if (!reportData()) {
             console.log('No data!')
@@ -103,10 +103,10 @@ function changeSelectBranch() {
 }
 
 
-async function set_selectBranch() {
+function set_selectBranch() {
     let strInnerHtml = "<option disabled>- เลือกสาขา -</option>";
     for (let i = 0; i < array_branch.length; i++) {
-        if (array_dataUser[1].fac_id === array_branch[i].fac_id) {
+        if (array_dataUser[1].fac_id == array_branch[i].fac_id) {
             strInnerHtml += `<option value="${array_branch[i].branch_id}">${array_branch[i].branch_name}</option>`;
         }
     }
@@ -116,10 +116,12 @@ async function set_selectBranch() {
 }
 
 
-async function set_selectBuilding() {
+function set_selectBuilding() {
+    console.log(array_building);
+    console.log(array_dataUser);
     let strInnerHtml = "<option disabled selected>- เลือกหอ -</option>";
     for (let i = 0; i < array_building.length; i++) {
-        if(array_dataUser[0].std_sex === array_building[i].building_gender || array_building[i].building_gender === '2') {
+        if(array_dataUser[0].std_sex == array_building[i].building_gender || array_building[i].building_gender == '2') {
             strInnerHtml += `<option value="${array_building[i].building_id}">${array_building[i].building_name}</option>`;
         }
     }
@@ -133,7 +135,7 @@ function set_selectFloor() {
     }
     let strInnerHtml = "<option disabled selected>- เลือกชั้น -</option>";
     for (let i = 0; i < array_floor.length; i++) {
-        if (document.getElementById('select_building').value === array_floor[i].building_id) {
+        if (document.getElementById('select_building').value == array_floor[i].building_id) {
             strInnerHtml += `<option value="${array_floor[i].floor_id}">${array_floor[i].floor_name}</option>`;
         }
     }
@@ -160,13 +162,13 @@ function check_premisionFloorBook() {
     let text = '';
     let alert = false;
     let nameFloor = floor.options[floor.selectedIndex].text;
-    if (nameFloor === 'ชั้น 3' && parseInt(array_dataUser[0].std_status) === 1) {
+    if (nameFloor == 'ชั้น 3' && parseInt(array_dataUser[0].std_status) == 1) {
         text = 'ชั้น 3 โดยปกติแล้วจะเป็นชั้น<br>สำหรับนักศึกษาเก่าของหอพัก<br>หากมีความจำเป็นก็สามารถจองได้ปกติ';
         alert = true;
-    } else if (nameFloor === 'ชั้น 2' && parseInt(array_dataUser[0].std_status) === 1) {
+    } else if (nameFloor == 'ชั้น 2' && parseInt(array_dataUser[0].std_status) == 1) {
         text = 'ชั้น 2 โดยปกติแล้วจะเป็นชั้น<br>สำหรับนักศึกษาเก่าของหอพัก<br>หากมีความจำเป็นก็สามารถจองได้ปกติ';
         alert = true;
-    } else if (nameFloor === 'ชั้น 1') {
+    } else if (nameFloor == 'ชั้น 1') {
         text = 'ชั้น 1 สำหรับเจ้าหน้าที่หอพัก !!';
         alert = true;
     }
@@ -187,7 +189,7 @@ async function push_Room() {
     let unitRoom = 0;
     let idRoomPush = [];
     for (let indexRoom = 0; indexRoom < array_room.length; indexRoom++) {
-        if (document.getElementById('select_floor').value === array_room[indexRoom].floor_id && array_room[indexRoom].room_status === '1') {
+        if (document.getElementById('select_floor').value == array_room[indexRoom].floor_id && array_room[indexRoom].room_status == '1') {
             let unitPersonBookInRoom = 0;
             let dataPersonBookInRoom = [];
             for (let indexBook = 0; indexBook < array_book.length; indexBook++) {
@@ -216,7 +218,7 @@ async function push_Room() {
                         && (array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) || 
                         (document.getElementById('select_branch').value == '99999' 
                         && array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) 
-                        && parseInt(array_room[indexRoom].room_status) === 1
+                        && parseInt(array_room[indexRoom].room_status) == 1
                     ) || ((array_areaBook[indexAreaBook].branch_id == null 
                             && array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) 
                             && (array_dataUser[0].std_sex == buildingGender || buildingGender == 2)
@@ -239,7 +241,7 @@ async function push_Room() {
                                 ${array_room[indexRoom].room_name}${(array_areaBook[indexAreaBook].branch_id == null ? '*' : '')}
                             </p>
                             <input class="roomShow_id hidden" type="text" value="${array_room[indexRoom].room_id}">
-                            <div class="${(unitPersonBookInRoom === 0 ? '' : 'dropdown-room')} z-20 hidden font-medium absolute w-60 text-sm mt-5 pt-3 pb-1 shadow-2xl">
+                            <div class="${(unitPersonBookInRoom == 0 ? '' : 'dropdown-room')} z-20 hidden font-medium absolute w-60 text-sm mt-5 pt-3 pb-1 shadow-2xl">
                                 <ul>
                                     ${await pushMemberDataInRoomBook(dataPersonBookInRoom)}
                                 </ul>
@@ -263,17 +265,17 @@ async function push_Room() {
 }
 
 
-async function checkStatusBook() {
-    if (parseInt(status_book.status_switch) === 1 || parseInt(status_book.status_switch) === 3) {
+function checkStatusBook() {
+    if (parseInt(status_book.status_switch) == 1 || parseInt(status_book.status_switch) == 3) {
         document.getElementById('areaBook').classList.remove('hidden');
         document.getElementById('ManualSystemBook').classList.remove('hidden'); 
         document.getElementsByClassName('statusTimeoutAutomateSystemBook')[1].classList.remove('hidden');
-        if (parseInt(status_book.status_switch) === 3) {
+        if (parseInt(status_book.status_switch) == 3) {
             document.getElementById('AutomateSystemBook').classList.remove('hidden');
             document.getElementsByClassName('spaceAreaManualSystemBook')[0].classList.remove('mb-20');
             document.getElementsByClassName('spaceAreaManualSystemBook')[0].classList.add('mb-6');
         }
-    } else if (parseInt(status_book.status_switch) === 2) {
+    } else if (parseInt(status_book.status_switch) == 2) {
         document.getElementsByClassName('statusTimeoutAutomateSystemBook')[0].classList.remove('hidden');
         document.getElementById('areaBook').classList.remove('hidden');
         document.getElementById('AutomateSystemBook').classList.remove('hidden');
@@ -282,7 +284,7 @@ async function checkStatusBook() {
                 document.getElementById('ManualSystemBook').classList.add('hidden'); 
             }
         }, 1000);
-    } else if (parseInt(status_book.status_switch) === 0) {
+    } else if (parseInt(status_book.status_switch) == 0) {
         Swal.fire({
             title: 'ระบบจองห้องพักปิดอยู่',
             html: 'ทางหอจะแจ้งวันเปิดเข้าจองให้ทราบ <br>โปรดติดตามข่าวสารของหอพัก !',
@@ -361,7 +363,7 @@ function datediff(first, second) {
 
 function callDateRange(statusDateRage, value_date_range_old) {
     // let date_range_old = document.getElementsByClassName('txt_timeRange')[0].value.split(' - ')[(statusDateRage == 0 ? 1 : 0)].split('/');
-    let date_range = value_date_range_old.split(' - ')[(parseInt(statusDateRage) === 0 ? 1 : 0)];
+    let date_range = value_date_range_old.split(' - ')[(parseInt(statusDateRage) == 0 ? 1 : 0)];
     console.log(date_range);
     nowTime = new Date();
     let hour = 23-(nowTime.getHours());

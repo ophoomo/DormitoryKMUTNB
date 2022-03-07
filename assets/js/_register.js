@@ -66,7 +66,7 @@ function checkEmpty() {
 
     msgShow = msgShow.slice(0, -3);
 
-    if (document.forms["form_register"]["txt_password"].value === document.forms["form_register"]["txt_password2"].value &&
+    if (document.forms["form_register"]["txt_password"].value == document.forms["form_register"]["txt_password2"].value &&
         document.forms["form_register"]["txt_password"].value.length >= 8) {
         document.getElementsByClassName('txtPass')[0].style.backgroundColor = "#fff";
         document.getElementsByClassName('txtPass')[1].style.backgroundColor = "#fff";
@@ -76,7 +76,7 @@ function checkEmpty() {
         document.getElementsByClassName('txtPass')[0].style.backgroundColor = "#ffcccc";
         document.getElementsByClassName('txtPass')[1].style.backgroundColor = "#ffcccc";
         setInterval(() => {
-            if (document.forms["form_register"]["txt_password"].value === document.forms["form_register"]["txt_password2"].value &&
+            if (document.forms["form_register"]["txt_password"].value == document.forms["form_register"]["txt_password2"].value &&
                 document.forms["form_register"]["txt_password"].value.length >= 8) {
                 document.getElementsByClassName('txtPass')[0].style.backgroundColor = "#fff";
                 document.getElementsByClassName('txtPass')[1].style.backgroundColor = "#fff";

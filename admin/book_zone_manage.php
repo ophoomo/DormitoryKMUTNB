@@ -214,6 +214,7 @@
                                                         }
                                                     }
                                         ?>
+                                                    <?php echo "<script>console.log('". $valueBranch[0] .", ". $valueBranch[1] . "')</script>"; ?>
                                                     <tr>
                                                         <td class="text-center"><?php echo $i+1; ?></td>
                                                         <td class="text-center <?php echo ($valueRoom['room_status'] == 0 ? 'text-red-900' : 'text-green-900') ?>"><?php echo ($valueRoom['room_status'] == 0 ? 'ปิดใช้งาน' : 'ปกติ') ?></td>
@@ -222,8 +223,8 @@
                                                             <?php echo $valueRoom['room_name']; ?>
                                                         </td>
                                                         <td class="
-                                                            <?php echo ($valueBranch[0] == 'NULL' ? 'text-red-900' : ($valueBranch[0] == 'FREE' ? 'text-green-900' : 'text-blue-900')) ?>">
-                                                            <?php echo ($valueBranch[0] == 'NULL' ? 'ยังไม่ได้รับการจัดสรร (จะไม่แสดงหน้าจองห้องพัก)' : ($valueBranch[0] == 'FREE' ? $valueBranch[1] : 'จัดสรรให้ : '.$valueBranch[1])) ?>
+                                                            <?php echo ($valueBranch[0] == 'NULL' ? 'text-red-900' : (($valueBranch[0] == 'FREE' || $valueBranch[0] == '-' || $valueBranch[0] == 0) ? 'text-green-900' : 'text-blue-900')) ?>">
+                                                            <?php echo ($valueBranch[0] == 'NULL' ? 'ยังไม่ได้รับการจัดสรร (จะไม่แสดงหน้าจองห้องพัก)' : (($valueBranch[0] == 'FREE' || $valueBranch[0] == '-' || $valueBranch[0] == 0) ? (($valueBranch[1] == '-' || $valueBranch[1] == 0) ? 'ได้รับการจัดสรรสำหรับทุกสาขา' : $valueBranch[1]) : 'จัดสรรให้ : '.$valueBranch[1])) ?>
                                                         </td> 
                                                     </tr>
                                         <?php 
@@ -241,7 +242,9 @@
                                         <select name="select_branch" class="select select-bordered w-full md:w-96">
                                             <option value="FREE"># จัดสรรสำหรับทุกสาขา</option>
                                             <?php for($i = 0; $i < count($arrayBranch); $i++): ?>
-                                                <option value="<?php echo $arrayBranch[$i][0] ?>"><?php echo $arrayBranch[$i][1]; ?></option>
+                                                <?php if ($arrayBranch[$i][1] != '-'): ?>
+                                                    <option value="<?php echo $arrayBranch[$i][0] ?>"><?php echo $arrayBranch[$i][1]; ?></option>
+                                                <?php endif; ?>        
                                             <?php endfor; ?>
                                             <option value="DESTROY"># ยกเลิกการจัดสรร</option>
                                         </select>
@@ -274,7 +277,8 @@
         $(document).ready(function () {
             $("#table_data").DataTable({
                 "autoWidth": false,
-                "lengthMenu": [10 ,20, 40, 60, 80, 100, 500]
+                "pageLength": 200,
+                "lengthMenu": [10 ,20, 40, 60, 80, 100, 200, 500],
             });
         });
 

@@ -53,7 +53,7 @@
     <div class="menu">
         <?php if (isset($_SESSION['std_id'])): ?>
             <div class="item userLogin">
-                <a href="system_profile.php"><span>สวัสดี </span>ชิษณุพงศ์</a>
+                <a href="system_profile.php"><span>สวัสดี </span><?php echo $_SESSION['std_firstname'] ?></a>
             </div>
         <?php endif; ?>
 

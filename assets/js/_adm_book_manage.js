@@ -7,7 +7,7 @@ var array_areaBook = null;
 var array_book = null;
 
 function reportData() {
-    if (status_book === null) {
+    if (status_book == null) {
         return false;
     } else {
         return true;    
@@ -74,7 +74,7 @@ function set_selectFloor() {
     }
     let strInnerHtml = "<option disabled selected>- เลือกชั้น -</option>";
     for (let i = 0; i < array_floor.length; i++) {
-        if (document.getElementById('select_building').value === array_floor[i].building_id) {
+        if (document.getElementById('select_building').value == array_floor[i].building_id) {
             strInnerHtml += `<option value="${array_floor[i].floor_id}">${array_floor[i].floor_name}</option>`;
         }
     }
@@ -105,8 +105,8 @@ async function push_Room() {
     let unitRoom = 0;
     let idRoomPush = [];
     for (let indexRoom = 0; indexRoom < array_room.length; indexRoom++) {
-        if ((document.getElementById('select_floor').value === array_room[indexRoom].floor_id) 
-            && array_room[indexRoom].room_status === '1') {
+        if ((document.getElementById('select_floor').value == array_room[indexRoom].floor_id) 
+            && array_room[indexRoom].room_status == '1') {
             let unitPersonBookInRoom = 0;
             let dataPersonBookInRoom = [];
             for (let indexBook = 0; indexBook < array_book.length; indexBook++) {
@@ -143,7 +143,7 @@ async function push_Room() {
                         && (array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) || 
                         (document.getElementById('select_branch').value == '99999' 
                         && array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) 
-                        && parseInt(array_room[indexRoom].room_status) === 1
+                        && parseInt(array_room[indexRoom].room_status) == 1
                     ) || ((array_areaBook[indexAreaBook].branch_id == null 
                             && array_areaBook[indexAreaBook].room_id == array_room[indexRoom].room_id)) 
                             && (buildingGenderForShowRoom == buildingGender || buildingGender == 2)
@@ -167,7 +167,7 @@ async function push_Room() {
                                 ${array_room[indexRoom].room_name}${(array_areaBook[indexAreaBook].branch_id == null ? '*' : '')}
                             </p>
                             <input class="roomShow_id hidden" type="text" value="${array_room[indexRoom].room_id}">
-                            <div class="${(unitPersonBookInRoom === 0 ? '' : 'dropdown-room')} z-20 hidden font-medium absolute w-60 text-sm mt-5 pt-3 pb-1 shadow-2xl">
+                            <div class="${(unitPersonBookInRoom == 0 ? '' : 'dropdown-room')} z-20 hidden font-medium absolute w-60 text-sm mt-5 pt-3 pb-1 shadow-2xl">
                                 <ul>
                                     ${await pushMemberDataInRoomBook(dataPersonBookInRoom)}
                                 </ul>

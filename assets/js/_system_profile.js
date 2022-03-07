@@ -33,11 +33,11 @@ window.onload = () => {
     pathHash = window.location.href;
     // pathHash = pathHash.slice(((pathHash).length)-8, pathHash.length);
     pathHash = pathHash.split("?");
-    if (pathHash[1] === 'dataStd') page = 0;
-    else if (pathHash[1] === 'dataFam') page = 1;
-    else if (pathHash[1] === 'dataOther') page = 2;
+    if (pathHash[1] == 'dataStd') page = 0;
+    else if (pathHash[1] == 'dataFam') page = 1;
+    else if (pathHash[1] == 'dataOther') page = 2;
     else page = 0;
-    changeShowData((page === 0 ? 'ข้อมูลนักศึกษา' : page === 1 ? 'ข้อมูลผู้ปกครอง' : 'ข้อมูลอื่น ๆ'), page);
+    changeShowData((page == 0 ? 'ข้อมูลนักศึกษา' : page == 1 ? 'ข้อมูลผู้ปกครอง' : 'ข้อมูลอื่น ๆ'), page);
 }
 
 
@@ -46,7 +46,7 @@ function changeShowData(txt, page) {
     document.getElementById('txtNav').innerHTML = txt;
     let x = document.getElementsByClassName('btn_showDataUser');
     for (let i = 0; i < x.length-1; i++) {
-        if (i === page) {
+        if (i == page) {
             document.getElementsByClassName('frm_data')[i].classList.remove('hidden');
         } else {
             try { document.getElementsByClassName('frm_data')[i].classList.add('hidden'); } catch (error) { continue; }
@@ -66,7 +66,7 @@ function unenableEditing() {
     }
 
     for (let i = 0; i < y.length; i++) {
-        if(i % 2 === 0) y[i].classList.remove('hidden')
+        if(i % 2 == 0) y[i].classList.remove('hidden')
         else y[i].classList.add('hidden')
     }
 }
@@ -81,7 +81,7 @@ function enableEditing() {
 
     let y = document.getElementsByClassName('btnEdit');
     for (let i = 0; i < y.length; i++) {
-        if (i % 2 === 0) document.getElementsByClassName('btnEdit')[i].classList.add('hidden');
+        if (i % 2 == 0) document.getElementsByClassName('btnEdit')[i].classList.add('hidden');
         else document.getElementsByClassName('btnEdit')[i].classList.remove('hidden');
     }
 }

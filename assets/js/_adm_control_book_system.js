@@ -38,7 +38,7 @@ function datediff(first, second) {
 
 function callDateRange(status, value_date_range_old) {
     // let date_range_old = document.getElementsByClassName('txt_timeRange')[0].value.split(' - ')[(status == 0 ? 1 : 0)].split('/');
-    let date_range = value_date_range_old.split(' - ')[(parseInt(status) === 0 ? 1 : 0)];
+    let date_range = value_date_range_old.split(' - ')[(parseInt(status) == 0 ? 1 : 0)];
 
     nowTime = new Date();
     let hour = 23-(nowTime.getHours());

@@ -24,7 +24,7 @@ function togglePopupEdit(index) {
 
 document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode === 27) {
+    if (evt.keyCode == 27) {
         document.getElementsByClassName('popupInsert')[0].classList.add('hidden');
         document.getElementsByClassName('popupEdit')[0].classList.add('hidden');
     }

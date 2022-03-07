@@ -50,18 +50,18 @@ window.onload = () => {
     let pathHash, page;
     pathHash = window.location.href;
     pathHash = pathHash.split("?")[1].split("&");
-    if (pathHash[0] === 'dataStd') page = 0;
-    else if (pathHash[0] === 'dataFam') page = 1;
-    else if (pathHash[0] === 'dataOther') page = 2;
+    if (pathHash[0] == 'dataStd') page = 0;
+    else if (pathHash[0] == 'dataFam') page = 1;
+    else if (pathHash[0] == 'dataOther') page = 2;
     else page = 0;
-    changeShowData((page === 0 ? 'ข้อมูลนักศึกษา' : page === 1 ? 'ข้อมูลผู้ปกครอง' : 'ข้อมูลอื่น ๆ'), page);
+    changeShowData((page == 0 ? 'ข้อมูลนักศึกษา' : page == 1 ? 'ข้อมูลผู้ปกครอง' : 'ข้อมูลอื่น ๆ'), page);
 }
 
 
 function changeShowData(txt, page) {
     let x = document.getElementsByClassName('btn_showDataUser');
     for (let i = 0; i < x.length-1; i++) {
-        if (i === page) {
+        if (i == page) {
             document.getElementsByClassName('frm_data')[i].classList.remove('hidden');
             if (i == 2) {
                 setTimeout(() => {
@@ -89,7 +89,7 @@ function unenableEditing() {
     }
 
     for (let i = 0; i < y.length; i++) {
-        if(i % 2 === 0) y[i].classList.remove('hidden')
+        if(i % 2 == 0) y[i].classList.remove('hidden')
         else y[i].classList.add('hidden')
     }
 }
@@ -104,7 +104,7 @@ function enableEditing() {
 
     let y = document.getElementsByClassName('btnEdit');
     for (let i = 0; i < y.length; i++) {
-        if (i % 2 === 0) document.getElementsByClassName('btnEdit')[i].classList.add('hidden');
+        if (i % 2 == 0) document.getElementsByClassName('btnEdit')[i].classList.add('hidden');
         else document.getElementsByClassName('btnEdit')[i].classList.remove('hidden');
     }
 }
@@ -147,7 +147,7 @@ async function is_book(book_id, floor_id, room_id) {
 async function inner_select_floor(book_id) {
     let statusData = false;
     for (let r = 0; r < data_Book[1].length; r++) {
-        if (book_id === data_Book[1][r][2]) {
+        if (book_id == data_Book[1][r][2]) {
             str_select_floor += `<option value="${data_Book[1][r][0]}">${data_Book[1][r][1]}</option>`;
             statusData = true;
         }
@@ -161,7 +161,7 @@ async function inner_select_floor(book_id) {
 async function inner_select_room(room_id) {
     let statusData = false;
     for (let r = 0; r < data_Book[2].length; r++) {
-        if (room_id === data_Book[2][r][2]) {
+        if (room_id == data_Book[2][r][2]) {
             str_select_room += `<option value="${data_Book[2][r][0]}">${data_Book[2][r][1]}</option>`;
             statusData = true;
         }

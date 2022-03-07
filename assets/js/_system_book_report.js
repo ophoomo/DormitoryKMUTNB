@@ -43,7 +43,7 @@ function is_disease() {
 var status_book = null;
 
 function reportData() {
-    if (status_book === null) {
+    if (status_book == null) {
         return false;
     } else {
         return true;    

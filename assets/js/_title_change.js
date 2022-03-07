@@ -14,7 +14,7 @@ setInterval(() => {
 }, 1000);
 
 setInterval(() => {
-    if (parseInt(now) % 2 === 0) {
+    if (parseInt(now) % 2 == 0) {
         title = oldStr;
         document.title = title;
     } else {

@@ -5,7 +5,7 @@ var array_book = null;
 
 
 function reportData() {
-    if (array_room === null) {
+    if (array_room == null) {
         return false;
     } else {
         return true;
@@ -54,7 +54,7 @@ async function set_selectBuilding() {
 function set_selectFloor() {
     let strInnerHtml = "<option disabled selected>- เลือกชั้น -</option>";
     for (let i = 0; i < array_floor.length; i++) {
-        if (document.getElementById('select_building').value === array_floor[i].building_id) {
+        if (document.getElementById('select_building').value == array_floor[i].building_id) {
             strInnerHtml += `<option value="${array_floor[i].floor_id}">${array_floor[i].floor_name}</option>`;
         }
     }

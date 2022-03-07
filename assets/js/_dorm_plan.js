@@ -38,7 +38,7 @@ document.getElementById('overlayImageZoom').onclick = () => {
 }
 document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode === 27) {
+    if (evt.keyCode == 27) {
         showImg.classList.add('deactive');
         reactiveOverflow();
     }
@@ -56,7 +56,7 @@ var showImage = document.getElementById("imgZoom");
 window.onload = getImgName;
 
 function getImgName(strImgPath) {
-    if (run === false) {
+    if (run == false) {
         activeZoomPopup();
     }
     run = false;

@@ -57,7 +57,7 @@ document.getElementById('overlayPopupNews').onclick = () => {
 
 document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode === 27) {
+    if (evt.keyCode == 27) {
         popup.classList.add('deactive');
         popupNews.classList.add('deactive');
     }

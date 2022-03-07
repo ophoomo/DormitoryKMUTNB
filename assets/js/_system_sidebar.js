@@ -29,7 +29,7 @@ window.addEventListener('scroll', function() {
 })
 
 document.getElementById('menu').onclick = () => {
-    if(checkWidth() === 0) {
+    if(checkWidth() == 0) {
         document.getElementById('sidebar').classList.toggle('lg:ml-0');
         document.getElementById('container').classList.toggle('lg:ml-64');
     } else {
@@ -50,7 +50,7 @@ document.getElementById('close_sidebar').onclick = () => {
 
 document.onkeydown = function(evt) {
     evt = evt || window.event;
-    if (evt.keyCode === 27) {
+    if (evt.keyCode == 27) {
         sidebarResponsive();
     }
 };
