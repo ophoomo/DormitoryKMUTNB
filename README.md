@@ -1,4 +1,5 @@
 # Student dormitory management website
+##This project is part of a "Computer Programming" course
 
 ## Tools
 1. PHP
@@ -7,7 +8,7 @@
 4. DataTalbe
 5. Scss
 6. Tailwind Css
-7. Daisyui
+7. DaisyUI
 8. jsToExcel
 
 ## Creators
