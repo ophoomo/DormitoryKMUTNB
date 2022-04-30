@@ -12,8 +12,7 @@
 
 ## Creators
 1. SamaHam
-2. Thanaphoom
-3. Mashiro
+2. Thanaphoom (Support)
 
 ## System recomment:
 - autoDestroyStdAll for not update&active >= 7 year
@@ -22,8 +21,5 @@
 - autoChangeStatusStd for not created >= 1 year
 
 ## For dev:
-tb_branch
-insert 1 row default
-branch_id = 0 
-fac_id = null 
-branch_name = '-'
+tb_branch insert 1 row default ->
+(branch_id = 0, fac_id = null, branch_name = '-')
