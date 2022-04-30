@@ -670,11 +670,22 @@
                 confirmButtonText: 'ยืนยันการลบ',
                 cancelButtonText: 'ยกเลิก'
             }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementsByClassName('btn_destroy_std')[0].click();
-                }
+                Swal.fire({
+                    title: 'ต้องการนำนักศึกษาคนนี้ออก!! โปรดยืนยันอีกครั้ง',
+                    text: 'หากดำเนินการแล้วจะไม่สามารถกู้ข้อมูลใด ๆ กลับมาได้อีก !',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'ยืนยันการลบ',
+                    cancelButtonText: 'ยกเลิก'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.getElementsByClassName('btn_destroy_std')[0].click();
+                    }
+                })
             })
-        })
+        });
     </script>
 
 

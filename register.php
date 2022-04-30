@@ -235,6 +235,12 @@
                 // if ($std_statusInsert && $fam_statusInsert1 && $fam_statusInsert2 && $fam_statusInsert3 && $fam_statusInsert4) {
                 if ($std_statusInsert && $fam_statusInsert1 && $fam_statusInsert2) {
                     echo "<script>
+                        setTimeout(() => {
+                            window.location.href='login.php'
+                        }, 6000);
+                    </script>";
+
+                    echo "<script>
                         Swal.fire({
                             title: 'สมัครสมาชิกเสร็จสิ้น',
                             text: 'ระบบกำลังพาท่านไปหน้าเข้าสู่ระบบ',
@@ -428,11 +434,11 @@
                         <input  name="date_birthday" type="date" placeholder="วัดเกิด" style="height: 20px;">
                     </div>
 
-                    <div class="question">
+                    <div class="question" style="position: relative; margin-bottom: 22px;">
                         <p>รหัสนักศึกษา</p>
-                        <input name="txt_idStd" type="text" maxlength="13" placeholder="ถ้ายังไม่มีใส่เลขบัตรประชาชน" maxlength="13">
+                        <input name="txt_idStd" type="text" maxlength="13" placeholder="ถ้าไม่มีรหัส นศ. เช่น 2564 ให้ใส่ 64">
+                        <p style="font-size:13px; bottom: -28px; position: absolute; width: max-content;">(ถ้ายังไม่มี ให้ใส่เลขท้ายปี พ.ศ. ที่สมัคร 2 หลัก)</p>
                     </div>
-
 
                     <div class="question">
                         <p>คณะ</p>

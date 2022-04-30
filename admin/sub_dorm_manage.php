@@ -142,7 +142,7 @@
                             $dataFloor = $floorClass->Find_Sort('floor_id, floor_name', 'building_id', $_GET['dorm_id'], 'floor_name ASC', '');
                             while ($valueFloor = $dataFloor->fetch(PDO::FETCH_ASSOC)):
                         ?>
-                            <div class="floor bg-gray-100 cursor-pointer hover:bg-gray-200">
+                            <div class="floor item_floor bg-gray-100 cursor-pointer hover:bg-gray-200">
                                 <div class="p-3 ml-4 flex justify-between border-opacity-40">
                                     <div class="flex flex-row pr-20 sm:pr-72" onclick="toggleRoomShow(<?php echo ($i); ?>)">
                                         <p class="w-14"><?php echo $valueFloor['floor_name']; ?></p>
@@ -155,17 +155,18 @@
                                                 <input class="floor_name" name="txt_floor_name" type="text" value="<?php echo ($valueFloor['floor_name']) ?>" style="display: none;">
                                                 <i class="fas fa-pencil-alt text-indigo-600"></i>
                                             </div>
-                                            <div onclick="confirm_delete(this, 0)">
+                                            <div onclick="confirm_delete(this, 0, <?php echo $i; ?>)">
                                                 <input name="floor_id_del" type="text" value="<?php echo ($valueFloor['floor_id']) ?>" style="display: none;">
                                                 <input class="nameDel" name="floor_name_del" type="text" value="<?php echo ($valueFloor['floor_name']) ?>" style="display: none;">
-                                                <input class="btn_del_floor" name="floor_submit_del" type="submit" style="display: none;">
                                                 <i class="fas fa-trash-alt text-red-700"></i>
                                             </div>
+                                            <input class="btn_del_floor" name="floor_submit_del" type="submit" style="display: none;">
                                         </div>
                                     </form>
                                 </div>
                                 <div class="room bg-gray-50 hidden">
                                     <?php
+                                        $indexRoom = 0;
                                         $check_room = 0;
                                         $dataRoom = $roomClass->Find_Sort('room_id, room_name, room_member, room_status', 'floor_id', $valueFloor['floor_id'], 'room_name ASC', '');
                                         while ($valueRoom = $dataRoom->fetch(PDO::FETCH_ASSOC)):
@@ -207,16 +208,17 @@
                                                             <input class="hidden room_status" name="txt_room_status" type="text" value="<?php echo ($valueRoom['room_status']) ?>">
                                                             <i class="fas fa-pencil-alt text-indigo-600"></i>
                                                         </div>
-                                                        <div onclick="confirm_delete(this, 1)">
+                                                        <div onclick="confirm_delete(this, 1, <?php echo $indexRoom; ?>, <?php echo $i ?>)">
                                                             <input name="room_id_del" type="text" value="<?php echo ($valueRoom['room_id']) ?>" style="display: none;">
                                                             <input class="nameDel" name="room_name_del" type="text" value="<?php echo ($valueRoom['room_name']) ?>" style="display: none;">
-                                                            <input class="btn_del_room" name="room_submit_del" type="submit" style="display: none;">
                                                             <i class="ml-2 p-1 fa-sm fas fa-trash-alt text-red-700"></i>
                                                         </div>
+                                                        <input class="btn_del_room" name="room_submit_del" type="submit" style="display: none;">
                                                     </div>
                                                 </form>
                                             </div>
                                     <?php
+                                            $indexRoom++;
                                             $check_room++;
                                         endwhile;
                                         if ($check_room <= 0)

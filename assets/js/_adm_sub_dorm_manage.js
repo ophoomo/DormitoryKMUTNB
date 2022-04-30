@@ -143,7 +143,7 @@ try {
     })
 } catch (error) { }
 
-function confirm_delete(elements, where) {
+function confirm_delete(elements, where, indexRoom, indexFloor) {
     Swal.fire({
         title: 'ต้องการลบ '+ elements.getElementsByClassName('nameDel')[0].value,
         html: "</p>"+"<span style='font-size: 1rem;'><p style='color: Brown; font-weight: 500;'>โปรดทราบ !</p>"+
@@ -170,10 +170,10 @@ function confirm_delete(elements, where) {
                 if (result.isConfirmed) {
                     switch (where) {
                         case 0:
-                            elements.getElementsByClassName('btn_del_floor')[0].click();
+                            document.getElementsByClassName('btn_del_floor')[indexRoom].click();
                             break;
                         case 1:
-                            elements.getElementsByClassName('btn_del_room')[0].click();
+                            document.getElementsByClassName('item_floor')[indexFloor].getElementsByClassName('btn_del_room')[indexRoom].click();
                             break;
                     }
                 }

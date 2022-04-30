@@ -325,7 +325,7 @@
                             </thead>
                             <tbody>
                             <?php 
-                                $dataStd = $stdClass->Select_Sort('std_firstname, std_lastname, std_address, branch_id, created_at', 'created_at DESC', '5', 1);
+                                $dataStd = $stdClass->Select_Sort('std_firstname, std_lastname, std_address, branch_id, created_at', 'created_at ASC', '5', 1);
                                 $i = 0;
                                 while ($valueStd = $dataStd->fetch(PDO::FETCH_ASSOC)): 
                                     $dataBranch = $branchClass->Find('branch_name', 'branch_id', $valueStd['branch_id']);
